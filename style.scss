@@ -1,0 +1,402 @@
+// npm install -g sass
+// sass landing_page/style.scss landing_page/style.css --watch
+
+// SCSS Variables
+$primary-color: #4caf4f;
+$secondary-color: #263238;
+$neutral-silver-color: #f5f7fa;
+$neutral-d-grey-color: #4d4d4d;
+$neutral-grey-color: #717171;
+$neutral-l-grey-color: #89939e;
+$neutral-grey-blue-color: #abbed1;
+$warning-color: #fbc02d;
+$error-color: #e53835;
+$success-color: #2e7d31;
+$black-color: #263238;
+$info-color: #2194f3;
+$shadow-color-base: #abbed1; // Màu cơ bản của bóng đổ
+
+//Font style variables
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin grid-columns($cols) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+}
+
+@mixin card-shadow(
+  $offset-y,
+  $blur-radius,
+  $opacity,
+  $offset-x: 0px,
+  $spread-radius: 0px
+) {
+  box-shadow: $offset-x $offset-y $blur-radius $spread-radius
+    rgba($shadow-color-base, $opacity);
+}
+
+@mixin hover-transform {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Common
+body {
+  font-family: "Inter", sans-serif;
+  color: $secondary-color;
+  line-height: 1.5;
+}
+
+//Font style
+.headline-1 {
+  font-size: 64px;
+  line-height: 76px;
+  font-weight: $font-weight-semibold;
+}
+
+.headline-2 {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: $font-weight-semibold;
+}
+
+.headline-3 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: $font-weight-semibold;
+}
+
+.headline-4 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: $font-weight-semibold;
+}
+
+.shadow-sm {
+  @include card-shadow(2px, 2px, 0.6); // offset-y: 2px, blur: 2px, opacity: 60%
+}
+
+.shadow-md {
+  @include card-shadow(4px, 4px, 0.4); // offset-y: 4px, blur: 4px, opacity: 40%
+}
+
+.shadow-lg {
+  @include card-shadow(6px, 6px, 0.3); // offset-y: 6px, blur: 6px, opacity: 30%
+}
+
+.shadow-xl {
+  @include card-shadow(8px, 8px, 0.4); // offset-y: 8px, blur: 8px, opacity: 40%
+}
+
+.shadow-2xl {
+  @include card-shadow(
+    16px,
+    16px,
+    0.3
+  ); // offset-y: 16px, blur: 16px, opacity: 30%
+}
+// Body Styles (Regular)
+.body-1 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: $font-weight-regular;
+}
+
+.body-2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $font-weight-regular;
+}
+
+.body-3 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-weight-regular;
+}
+
+.body-4 {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: $font-weight-regular;
+}
+
+// Body Styles (Medium)
+.body-1-medium {
+  @extend .body-1;
+  font-weight: $font-weight-medium;
+}
+
+.body-2-medium {
+  @extend .body-2;
+  font-weight: $font-weight-medium;
+}
+
+.body-3-medium {
+  @extend .body-3;
+  font-weight: $font-weight-medium;
+}
+
+.body-4-medium {
+  @extend .body-4;
+  font-weight: $font-weight-medium;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Components
+.button {
+  padding: 16px 32px;
+  border-radius: 4px;
+  width: fit-content;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &--md {
+    padding: 14px 32px;
+  }
+  &--sm {
+    padding: 8px 32px;
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
+.section {
+  padding-top: 72px;
+  &-head {
+    text-align: center;
+    &__title {
+      max-width: 500px;
+      margin: 0 auto;
+      @extend .headline-3;
+      margin-bottom: 10px;
+    }
+    &__desc {
+      @extend .body-3;
+      color: $neutral-grey-color;
+    }
+  }
+}
+
+// Header
+.header {
+  padding: 16px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__container {
+    height: 100%;
+    @include flex-center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: block;
+
+    &-img {
+      height: 24px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 20px;
+    &-list {
+      @include flex-center;
+      list-style: none;
+      gap: 32px;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $secondary-color;
+      font-weight: 500;
+
+      &--active {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  height: 500px;
+  padding: 80px 0;
+  background-color: $neutral-silver-color;
+
+  &__container {
+    @include flex-center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 44px;
+    color: $secondary-color;
+    margin-bottom: 16px;
+
+    &--green {
+      color: $primary-color;
+      display: block;
+      line-height: 50px;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  &__image {
+    img {
+      width: 272px;
+      height: auto;
+    }
+  }
+}
+
+// Clients Section
+.clients {
+  text-align: center;
+
+  &__logo-grid {
+    display: grid;
+    margin-top: 48px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 32px;
+    align-items: center;
+    justify-items: center;
+  }
+  &__logo-items {
+  }
+}
+
+// Community Section
+.community {
+  &__title {
+    font-size: 36px;
+    color: $secondary-color;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  &__grid {
+    margin-top: 40px;
+    @include grid-columns(3);
+    justify-items: center;
+    gap: 32px;
+  }
+
+  &__card {
+    background-color: #fff;
+    padding: 32px;
+    max-width: 300px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    @extend .shadow-sm;
+    @include hover-transform;
+
+    &-icon {
+      width: 64px;
+      height: 64px;
+    }
+
+    &-title {
+      @extend .headline-4;
+      color: $secondary-color;
+    }
+
+    &-description {
+      @extend .body-3;
+      color: $neutral-grey-color;
+    }
+  }
+}
+
+//Pixel grade section
+.pixel-grade {
+  &__container {
+    padding: 0 64px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 64px;
+  }
+  &__img {
+    img {
+      min-width: 400px;
+    }
+  }
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__text-title {
+    @extend .headline-3;
+  }
+  &__text-desc {
+    @extend .body-3;
+    color: $neutral-grey-color;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .header {
+    &__nav {
+      display: none;
+    }
+  }
+
+  .hero {
+    &__container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  .community {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
