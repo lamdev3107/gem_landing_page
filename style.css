@@ -22,19 +22,20 @@ body {
   font-weight: 600;
 }
 
-.headline-3, .pixel-grade__text-title, .section-head__title {
+.headline-3 {
   font-size: 28px;
   line-height: 36px;
   font-weight: 600;
 }
 
-.headline-4, .community__card-title {
+.headline-4 {
   font-size: 20px;
   line-height: 28px;
   font-weight: 600;
 }
 
-.shadow-sm, .community__card {
+.shadow-sm,
+.community__card {
   box-shadow: 0px 2px 2px 0px rgba(171, 190, 209, 0.6);
 }
 
@@ -54,25 +55,32 @@ body {
   box-shadow: 0px 16px 16px 0px rgba(171, 190, 209, 0.3);
 }
 
-.body-1, .body-1-medium {
+.body-1,
+.body-1-medium {
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
 }
 
-.body-2, .body-2-medium {
+.body-2,
+.body-2-medium {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
 
-.body-3, .pixel-grade__text-desc, .community__card-description, .section-head__desc, .body-3-medium {
+.body-3,
+.pixel-grade__text-desc,
+.community__card-description,
+.section-head__desc,
+.body-3-medium {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
 }
 
-.body-4, .body-4-medium {
+.body-4,
+.body-4-medium {
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
