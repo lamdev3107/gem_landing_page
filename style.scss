@@ -43,13 +43,6 @@ $font-weight-semibold: 600;
     rgba($shadow-color-base, $opacity);
 }
 
-@mixin hover-transform {
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: translateY(-5px);
-  }
-}
-
 // Reset
 * {
   margin: 0;
@@ -159,9 +152,8 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 // Components
@@ -173,7 +165,6 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-
   &--md {
     padding: 14px 32px;
   }
@@ -190,15 +181,16 @@ body {
 .section {
   padding-top: 72px;
   &-head {
+    max-width: 1, 110px;
     text-align: center;
     &__title {
-      max-width: 500px;
+      max-width: 542px;
       margin: 0 auto;
-      @extend .headline-3;
+      @extend .headline-2;
       margin-bottom: 10px;
     }
     &__desc {
-      @extend .body-3;
+      @extend .body-2;
       color: $neutral-grey-color;
     }
   }
@@ -206,11 +198,13 @@ body {
 
 // Header
 .header {
-  padding: 16px 0;
-  background-color: #fff;
+  height: 84px;
+  background-color: $neutral-silver-color;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   &__container {
+    @extend .container;
+    padding: 0 120px;
     height: 100%;
     @include flex-center;
     justify-content: space-between;
@@ -228,57 +222,81 @@ body {
     display: flex;
     height: 100%;
     align-items: center;
-    gap: 20px;
     &-list {
       @include flex-center;
       list-style: none;
-      gap: 32px;
+      gap: 50px;
     }
 
     &-link {
       text-decoration: none;
       color: $secondary-color;
-      font-weight: 500;
 
       &--active {
+        @extend .body-2-medium;
         color: $primary-color;
       }
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    button {
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    &-login {
+      background: transparent;
+      border: 1px solid $neutral-l-grey-color;
+      color: $primary-color;
+    }
+    &-signup {
+      @extend .button--primary;
     }
   }
 }
 
 // Hero Section
 .hero {
-  height: 500px;
-  padding: 80px 0;
+  min-height: fit-content;
   background-color: $neutral-silver-color;
 
-  &__container {
+  .hero__container {
     @include flex-center;
+    @extend .container;
+    padding: 96px 144px;
+
     justify-content: space-between;
-  }
+    gap: 32px;
+    height: fit-content;
+    .hero__content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
 
-  &__title {
-    font-size: 44px;
-    color: $secondary-color;
-    margin-bottom: 16px;
-
-    &--green {
-      color: $primary-color;
-      display: block;
-      line-height: 50px;
-    }
-  }
-
-  &__description {
-    font-size: 18px;
-    margin-bottom: 32px;
-  }
-
-  &__image {
-    img {
-      width: 272px;
-      height: auto;
+      .hero__title {
+        @extend .headline-1;
+        color: $secondary-color;
+        &--green {
+          color: $primary-color;
+          display: block;
+          line-height: 50px;
+        }
+      }
+      .hero__description {
+        @extend .body-2;
+        color: $neutral-grey-color;
+      }
+      .hero__image {
+        img {
+          width: 272px;
+          height: auto;
+        }
+      }
     }
   }
 }
@@ -286,33 +304,25 @@ body {
 // Clients Section
 .clients {
   text-align: center;
-
   &__logo-grid {
-    display: grid;
-    margin-top: 48px;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    display: flex;
+    min-height: fit-content;
+    height: 98px;
+    margin: 16px auto 0;
+    max-width: 1152px;
     gap: 32px;
     align-items: center;
-    justify-items: center;
-  }
-  &__logo-items {
+    justify-content: space-between;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
   }
 }
 
 // Community Section
 .community {
-  &__title {
-    font-size: 36px;
-    color: $secondary-color;
-    text-align: center;
-    margin-bottom: 8px;
-  }
-
-  &__description {
-    text-align: center;
-    margin-bottom: 48px;
-  }
-
   &__grid {
     margin-top: 40px;
     @include grid-columns(3);
@@ -320,31 +330,38 @@ body {
     gap: 32px;
   }
 
-  &__card {
+  &-card {
     background-color: #fff;
-    padding: 32px;
-    max-width: 300px;
+    border-radius: 8px;
+    padding: 24px 32px;
+    width: 300px;
+    min-height: fit-content;
+    height: 260px;
     border-radius: 4px;
     display: flex;
-    align-items: center;
     flex-direction: column;
     gap: 8px;
-    text-align: center;
     @extend .shadow-sm;
-    @include hover-transform;
-
-    &-icon {
-      width: 64px;
-      height: 64px;
+    &__top-content {
+      height: 144px;
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      img {
+        width: 65px;
+        height: 56px;
+      }
+      h3 {
+        @extend .headline-3;
+        color: $secondary-color;
+      }
     }
 
-    &-title {
-      @extend .headline-4;
-      color: $secondary-color;
-    }
-
-    &-description {
+    &__description {
       @extend .body-3;
+      text-align: center;
       color: $neutral-grey-color;
     }
   }
@@ -389,7 +406,8 @@ body {
 
   .hero {
     &__container {
-      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
     }
   }

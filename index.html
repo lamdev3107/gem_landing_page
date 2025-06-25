@@ -9,7 +9,7 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="header__container container">
+      <div class="header__container">
         <a href="#" class="header__logo">
           <img
             src="assets/icons/Logo.svg"
@@ -25,28 +25,36 @@
               >
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Features</a>
+              <a href="#" class="header__nav-link">Service</a>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Community</a>
+              <a href="#" class="header__nav-link">Feature</a>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Blog</a>
+              <a href="#" class="header__nav-link">Product</a>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Pricing</a>
+              <a href="#" class="header__nav-link">Testimonial</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">FAQ</a>
             </li>
           </ul>
-          <button class="header__nav-button button button--md button--primary">
-            Register Now →
-          </button>
         </nav>
+        <div class="header__buttons">
+          <button class="button header__buttons-login button--md">
+            Log In
+          </button>
+          <button class="button header__buttons-signup button--md">
+            Sign Up
+          </button>
+        </div>
       </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero__container container">
+      <div class="hero__container">
         <div class="hero__content">
           <h1 class="hero__title">
             Lessons and insights
@@ -101,38 +109,46 @@
         </div>
 
         <div class="community__grid">
-          <div class="community__card">
-            <img
-              src="assets/icons/community-1.svg"
-              alt="Membership"
-              class="community__card-icon"
-            />
-            <h3 class="community__card-title">Membership Organisations</h3>
-            <p class="community__card-description">
+          <div class="community-card">
+            <div class="community-card__top-content">
+              <img
+                src="assets/icons/community-1.svg"
+                alt="National"
+                class="community-card__icon"
+              />
+              <h3 class="community-card__title">Membership Organisations</h3>
+            </div>
+            <p class="community-card__description">
               Our membership management software provides full automation of
               membership renewals and payments
             </p>
           </div>
-          <div class="community__card">
-            <img
-              src="assets/icons/community-2.svg"
-              alt="National"
-              class="community__card-icon"
-            />
-            <h3 class="community__card-title">National Associations</h3>
-            <p class="community__card-description">
+
+          <div class="community-card">
+            <div class="community-card__top-content">
+              <img
+                src="assets/icons/community-2.svg"
+                alt="National"
+                class="community-card__icon"
+              />
+              <h3 class="community-card__title">National Associations</h3>
+            </div>
+            <p class="community-card__description">
               Our membership management software provides full automation of
               membership renewals and payments
             </p>
           </div>
-          <div class="community__card">
-            <img
-              src="assets/icons/community-3.svg"
-              alt="Clubs"
-              class="community__card-icon"
-            />
-            <h3 class="community__card-title">Clubs And Groups</h3>
-            <p class="community__card-description">
+
+          <div class="community-card">
+            <div class="community-card__top-content">
+              <img
+                src="assets/icons/community-3.svg"
+                alt="National"
+                class="community-card__icon"
+              />
+              <h3 class="community-card__title">Clubs And Groups</h3>
+            </div>
+            <p class="community-card__description">
               Our membership management software provides full automation of
               membership renewals and payments
             </p>
@@ -147,24 +163,27 @@
           <img src="/assets/images/rafiki.svg" alt="rafiki" />
         </div>
         <div class="pixel-grade__content">
-          <h2 class="pixel-grade__text-title">
-            The unseen of spending three years at Pixelgrade
-          </h2>
-          <p class="pixel-grade__text-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-            Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
-            tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
-            Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
-            elementum pulvinar odio.
-          </p>
+          <div class="pixel-grad__text-content">
+            <h2 class="pixel-grade__text-title">
+              The unseen of spending three years at Pixelgrade
+            </h2>
+            <p class="pixel-grade__text-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+              Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+              tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+              Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+              elementum pulvinar odio.
+            </p>
+          </div>
           <button class="button button--md button--primary">Learn more</button>
         </div>
       </div>
     </section>
 
     <section class="section local-business">
-      <div class="container">
+      <div class="local-business__container">
+        <!-- Left content  -->
         <div class="local-business__left">
           <h2 class="local-business__left-title">
             Helping a local
@@ -176,14 +195,180 @@
             We reached here with our hard work and dedication
           </p>
         </div>
+
+        <!-- Right content  -->
         <div class="local-business__right">
           <div class="local-business__right-grid">
-            <div class="local-business__right-item">
-              local-business__right-item
+            <div class="local-business-item">
+              <img
+                src="/assets/icons/local-business-icon1.svg"
+                alt=""
+                class="local-business-item__icon"
+              />
+              <div class="local-business-item__texts">
+                <p class="local-business-item__number">2,245,341</p>
+                <p class="local-business-item__desc">Members</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section how-to">
+      <div class="container how-to__container">
+        <div class="how-to__img">
+          <img src="/assets/images/rafiki.svg" alt="rafiki" />
+        </div>
+        <div class="how-to__content">
+          <div class="pixel-grad__text-content">
+            <h2 class="how-to__text-title">
+              How to design your site footer like we did
+            </h2>
+            <p class="how-to__text-desc">
+              Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
+              augue nec tincidunt molestie, massa nunc varius arcu, at
+              scelerisque elit erat a magna. Donec quis erat at libero ultrices
+              mollis. In hac habitasse platea dictumst. Vivamus vehicula leo
+              dui, at porta nisi facilisis finibus. In euismod augue vitae nisi
+              ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla
+              commodo faucibus efficitur quis massa. Praesent felis est, finibus
+              et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus
+              ipsum id gravida.
+            </p>
+          </div>
+          <button class="button button--md button--primary">Learn more</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="left-content"></div>
+      <div class="right-content">
+        <div class="top">
+          <div class="para">
+            Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+            lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
+            enim metus. Vivamus sed libero ornare, tristique quam in, gravida
+            enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit
+            at ligula molestie, nec molestie mi blandit. Suspendisse cursus
+            tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse
+            eget lorem eu turpis vestibulum pretium. Suspendisse potenti.
+            Quisque malesuada enim sapien, vitae placerat ante feugiat eget.
+            Quisque vulputate odio neque, eget efficitur libero condimentum id.
+            Curabitur id nibh id sem dignissim finibus ac sit amet magna. Tim
+            Smith British Dragon Boat Racing Association Meet all customers
+          </div>
+          <div class="person">
+            <p class="person__name">Tim Smith</p>
+            <p class="person__organization">
+              British Dragon Boat Racing Association
+            </p>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="list-icon">
+            <img src="assets/icons/client-1.svg" alt="" />
+            <img src="assets/icons/client-2.svg" alt="" />
+            <img src="assets/icons/client-3.svg" alt="" />
+            <img src="assets/icons/client-4.svg" alt="" />
+            <img src="assets/icons/client-5.svg" alt="" />
+            <img src="assets/icons/client-6.svg" alt="" />
+            <img src="assets/icons/client-7.svg" alt="" />
+          </div>
+          <div class="link">
+            Meet all customers
+            <img src="assets/icons/arrow-right.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="caring">
+      <div class="section-head">
+        <h2 class="section-head__title">Caring is the new marketing</h2>
+        <p class="section-head__desc">
+          The Nexcent blog is the best place to read about the latest membership
+          insights, trends and more. See who's joining the community, read about
+          how our community are increasing their membership income and lot's
+          more.​
+        </p>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card-item">
+        <img
+          src="assets/images/image 18.png"
+          alt="caring-img-1"
+          class="card-item__img"
+        />
+        <div class="card-grid__content">
+          <p class="card-item__title">
+            Creating Streamlined Safeguarding Processes with OneRen
+          </p>
+          <a href="" class="card-item__read-more">
+            Read more
+            <img src="assets/icons/arrow-right.svg" alt="arrow-right-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="get-demo">
+      <h2 class="get-demo__title">
+        Pellentesque suscipit fringilla libero eu.
+      </h2>
+      <button class="get-demo__button">Get a Demo</button>
+    </div>
+
+    <footer>
+      <div class="left-content">
+        <img
+          src="assets/icons/Logo-white.svg"
+          alt="Logo White"
+          class="left-content__logo"
+        />
+        <div class="left-content__copyright">
+          <p>Copyright © 2020 Nexcent ltd.</p>
+          <p>All rights reserved</p>
+        </div>
+        <div class="left-content__social">
+          <a href="#"><img src="assets/icons/instagram.svg" alt="insta" /></a>
+          <a href="#"><img src="assets/icons/dribble.svg" alt="dribble" /></a>
+          <a href="#"><img src="assets/icons/twitter.svg" alt="twitter" /></a>
+          <a href="#"><img src="assets/icons/youtube.svg" alt="youtube" /></a>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="right-content-items">
+          <h4 class="right-content-items__title">Company</h4>
+          <ul>
+            <li>About us</li>
+            <li>Blog</li>
+            <li>Contact us</li>
+            <li>Pricing</li>
+            <li>Testimonials</li>
+          </ul>
+        </div>
+        <div class="right-content-items">
+          <h4 class="right-content-items__title">Support</h4>
+          <ul>
+            <li>Help center</li>
+            <li>Term of service</li>
+            <li>Legal</li>
+            <li>Privacy policy</li>
+            <li>Status</li>
+          </ul>
+        </div>
+        <div class="right-content-items">
+          <h4 class="right-content-items__title">Stay up to date</h4>
+          <div class="right-content__email">
+            <input type="email" />
+            <img src="assets/icons/send.svg" alt="send icon" />
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
