@@ -5,6 +5,7 @@
 $primary-color: #4caf4f;
 $secondary-color: #263238;
 $neutral-silver-color: #f5f7fa;
+$neutral-black-color: #263238;
 $neutral-d-grey-color: #4d4d4d;
 $neutral-grey-color: #717171;
 $neutral-l-grey-color: #89939e;
@@ -183,6 +184,7 @@ body {
     flex-direction: column;
     align-items: center;
     &__title {
+      text-align: center;
       max-width: 542px;
       margin: 0 auto;
       @extend .headline-2;
@@ -324,6 +326,11 @@ body {
 
 // Community Section
 .community {
+  @extend .section;
+  &__container {
+    @extend .container;
+    padding: 0 144px;
+  }
   &__grid {
     margin-top: 40px;
     display: grid;
@@ -331,7 +338,6 @@ body {
     justify-items: center;
     gap: 32px;
   }
-
   &-card {
     background-color: #fff;
     border-radius: 8px;
@@ -564,6 +570,48 @@ body {
     }
   }
 }
+
+.get-demo {
+  margin-top: 144px;
+  background-color: $neutral-silver-color;
+  padding: 32px;
+  &__title {
+    text-align: center;
+    @extend .headline-1;
+    margin: 0 auto;
+    width: 887px;
+    max-width: fit-content;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__button {
+    @extend .button--primary;
+    padding: 14px 32px;
+    border: none;
+    margin-top: 16px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+}
+
+footer {
+  padding: 64px 165px;
+  background-color: $neutral-black-color;
+
+  .left-content {
+    display: inlint-flex;
+    flex-direction: column;
+    gap: 16px;
+    &__copyright {
+      p {
+        color: $neutral-silver-color;
+        @extend .body-3;
+      }
+    }
+  }
+}
+
 // Responsive Design
 @media (max-width: 768px) {
   .header {

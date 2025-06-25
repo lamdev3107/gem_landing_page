@@ -10,7 +10,7 @@ body {
   line-height: 1.5;
 }
 
-.headline-1, .hero .hero__container .hero__content .hero__title {
+.headline-1, .get-demo__title, .hero .hero__container .hero__content .hero__title {
   font-size: 64px;
   line-height: 76px;
   font-weight: 600;
@@ -66,7 +66,7 @@ body {
   font-weight: 400;
 }
 
-.body-3, .pixel-grade__content .pixel-grade__text-content .pixel-grade__text-desc, .community-card__description, .body-3-medium {
+.body-3, footer .left-content__copyright p, .pixel-grade__content .pixel-grade__text-content .pixel-grade__text-desc, .community-card__description, .body-3-medium {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -98,7 +98,7 @@ body {
   clear: both;
 }
 
-.container, .caring, .tesla__container, .local-business__container, .pixel-grade, .hero .hero__container, .header__container {
+.container, .caring, .tesla__container, .local-business__container, .pixel-grade, .community__container, .hero .hero__container, .header__container {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -118,12 +118,12 @@ body {
 .button--sm {
   padding: 8px 32px;
 }
-.button--primary, .header__buttons-signup {
+.button--primary, .get-demo__button, .header__buttons-signup {
   background-color: #4caf4f;
   color: #fff;
 }
 
-.section, .caring, .local-business__container, .pixel-grade {
+.section, .caring, .local-business__container, .pixel-grade, .community {
   margin-top: 40px;
 }
 .section-head {
@@ -133,6 +133,7 @@ body {
   align-items: center;
 }
 .section-head__title {
+  text-align: center;
   max-width: 542px;
   margin: 0 auto;
   margin-bottom: 10px;
@@ -245,6 +246,9 @@ body {
   height: 48px;
 }
 
+.community__container {
+  padding: 0 144px;
+}
 .community__grid {
   margin-top: 40px;
   display: grid;
@@ -438,6 +442,41 @@ body {
   align-items: center;
   justify-content: center;
   color: #4caf4f;
+}
+
+.get-demo {
+  margin-top: 144px;
+  background-color: #f5f7fa;
+  padding: 32px;
+}
+.get-demo__title {
+  text-align: center;
+  margin: 0 auto;
+  width: 887px;
+  max-width: fit-content;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.get-demo__button {
+  padding: 14px 32px;
+  border: none;
+  margin-top: 16px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+footer {
+  padding: 64px 165px;
+  background-color: #263238;
+}
+footer .left-content {
+  display: inlint-flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .left-content__copyright p {
+  color: #f5f7fa;
 }
 
 @media (max-width: 768px) {
