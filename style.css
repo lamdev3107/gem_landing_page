@@ -16,19 +16,19 @@ body {
   font-weight: 600;
 }
 
-.headline-2, .section-head__title {
+.headline-2, .local-business__container .local-business__left .local-business__left-title, .pixel-grade__content .pixel-grade__text-content .pixel-grade__text-title, .section-head__title {
   font-size: 36px;
   line-height: 44px;
   font-weight: 600;
 }
 
-.headline-3, .pixel-grade__text-title, .community-card__top-content h3 {
+.headline-3, .local-business__container .local-business__right .right-item__number, .community-card__top-content h3 {
   font-size: 28px;
   line-height: 36px;
   font-weight: 600;
 }
 
-.headline-4 {
+.headline-4, .caring__card-grid .card-item__content a, .caring__card-grid .card-item__content p, .tesla__right .bottom-content__link, .tesla__right .top-content .person__name {
   font-size: 20px;
   line-height: 28px;
   font-weight: 600;
@@ -42,7 +42,7 @@ body {
   box-shadow: 0px 4px 4px 0px rgba(171, 190, 209, 0.4);
 }
 
-.shadow-lg {
+.shadow-lg, .caring__card-grid .card-item__content {
   box-shadow: 0px 6px 6px 0px rgba(171, 190, 209, 0.3);
 }
 
@@ -60,13 +60,13 @@ body {
   font-weight: 400;
 }
 
-.body-2, .hero .hero__container .hero__content .hero__description, .section-head__desc, .body-2-medium, .header__nav-link--active {
+.body-2, .tesla__right .top-content .person__organization, .tesla__right .top-content__para, .local-business__container .local-business__right .right-item__desc, .local-business__container .local-business__left .local-business__left-desc, .hero .hero__container .hero__content .hero__description, .section-head__desc, .body-2-medium, .header__nav-link--active {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
 
-.body-3, .pixel-grade__text-desc, .community-card__description, .body-3-medium {
+.body-3, .pixel-grade__content .pixel-grade__text-content .pixel-grade__text-desc, .community-card__description, .body-3-medium {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -94,7 +94,11 @@ body {
   font-weight: 500;
 }
 
-.container, .hero .hero__container, .header__container {
+.clear-both {
+  clear: both;
+}
+
+.container, .caring, .tesla__container, .local-business__container, .pixel-grade, .hero .hero__container, .header__container {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -119,12 +123,14 @@ body {
   color: #fff;
 }
 
-.section {
-  padding-top: 72px;
+.section, .caring, .local-business__container, .pixel-grade {
+  margin-top: 40px;
 }
 .section-head {
-  max-width: 1, 110px;
-  text-align: center;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .section-head__title {
   max-width: 542px;
@@ -132,7 +138,9 @@ body {
   margin-bottom: 10px;
 }
 .section-head__desc {
+  text-align: center;
   color: #717171;
+  max-width: 628px;
 }
 
 .header {
@@ -276,24 +284,160 @@ body {
   color: #717171;
 }
 
-.pixel-grade__container {
-  padding: 0 64px;
+.pixel-grade {
+  height: 433px;
+  padding: 0 144px;
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 64px;
 }
+.pixel-grade__img {
+  width: 423px;
+}
 .pixel-grade__img img {
-  min-width: 400px;
+  height: 329px;
 }
 .pixel-grade__content {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.pixel-grade__content .pixel-grade__text-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.pixel-grade__text-desc {
+.pixel-grade__content .pixel-grade__text-content .pixel-grade__text-desc {
   color: #717171;
+}
+
+.local-business {
+  background: #f5f7fa;
+}
+.local-business__container {
+  padding: 64px 144px;
+  display: flex;
+  justify-content: space-between;
+}
+.local-business__container .local-business__left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 540px;
+}
+.local-business__container .local-business__left .local-business__left-title--green {
+  color: #4caf4f;
+}
+.local-business__container .local-business__right {
+  display: grid;
+  width: 540px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 30px;
+}
+.local-business__container .local-business__right .right-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.local-business__container .local-business__right .right-item img {
+  width: 48px;
+  height: 48px;
+}
+.local-business__container .local-business__right .right-item__desc {
+  color: #717171;
+}
+
+.tesla {
+  background-color: #f5f7fa;
+}
+.tesla__container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 32px 144px;
+}
+.tesla__left img {
+  width: 326px;
+  height: 326px;
+  border-radius: 8px;
+}
+.tesla__right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: fit-content;
+}
+.tesla__right .top-content__para {
+  width: 748px;
+  color: #717171;
+  margin-bottom: 16px;
+}
+.tesla__right .top-content .person__name {
+  color: #4caf4f;
+  margin-bottom: 8px;
+}
+.tesla__right .top-content .person__organization {
+  color: #89939e;
+}
+.tesla__right .bottom-content {
+  display: flex;
+  gap: 32px;
+}
+.tesla__right .bottom-content__list-icon {
+  display: flex;
+  gap: 36px;
+}
+.tesla__right .bottom-content__list-icon img {
+  width: 44px;
+  height: 44px;
+}
+.tesla__right .bottom-content__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #4caf4f;
+  vertical-align: middle;
+}
+
+.caring {
+  padding: 0 144px;
+}
+.caring__card-grid {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.caring__card-grid .card-item {
+  width: fit-content;
+  height: fit-content;
+}
+.caring__card-grid .card-item__wrapper {
+  position: relative;
+}
+.caring__card-grid .card-item__content {
+  position: absolute;
+  left: 50%;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  background-color: #f5f7fa;
+  padding: 16px;
+}
+.caring__card-grid .card-item__content p {
+  text-align: center;
+  width: 285px;
+  height: 84px;
+}
+.caring__card-grid .card-item__content a {
+  margin-top: 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4caf4f;
 }
 
 @media (max-width: 768px) {
