@@ -1,0 +1,49 @@
+// Community Section
+.community {
+  @extend .section;
+  &__container {
+    @extend .container;
+  }
+  &__grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 20px;
+  }
+  &-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px 32px;
+    width: 100%;
+    max-width: 300px;
+    min-height: fit-content;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @extend .shadow-sm;
+    &__top-content {
+      height: 144px;
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      img {
+        width: 65px;
+        height: 56px;
+      }
+      h3 {
+        @extend .headline-3;
+        color: $secondary-color;
+      }
+    }
+
+    &__description {
+      @extend .body-3;
+      text-align: center;
+      color: $neutral-grey-color;
+    }
+  }
+}

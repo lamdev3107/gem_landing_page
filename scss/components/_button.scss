@@ -1,0 +1,20 @@
+.button {
+  padding: 16px 32px;
+  border-radius: 4px;
+  width: fit-content;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &--md {
+    padding: 14px 32px;
+  }
+  &--sm {
+    padding: 8px 32px;
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}

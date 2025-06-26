@@ -1,0 +1,38 @@
+//Pixel grade section
+.pixel-grade {
+  @extend .section;
+  @extend .container;
+  height: 433px;
+  min-height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 64px;
+
+  &__img {
+    width: 423px;
+    img {
+      height: 329px;
+    }
+  }
+  &__content {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .pixel-grade__text-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .pixel-grade__text-title {
+        @extend .headline-2;
+      }
+      .pixel-grade__text-desc {
+        @extend .body-3;
+        color: $neutral-grey-color;
+      }
+    }
+  }
+}

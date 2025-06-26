@@ -1,0 +1,77 @@
+// Header
+.header {
+  height: 84px;
+  background-color: $neutral-silver-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__container {
+    @extend .container;
+    height: 100%;
+    @include flex-center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: block;
+
+    &-img {
+      height: 24px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    &-list {
+      @include flex-center;
+      list-style: none;
+      gap: 50px;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $secondary-color;
+
+      &--active {
+        @extend .body-2-medium;
+        color: $primary-color;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    button {
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    &-login {
+      background: transparent;
+      border: 1px solid $neutral-l-grey-color;
+      color: $primary-color;
+    }
+    &-signup {
+      @extend .button--primary;
+    }
+  }
+  &__hamburger-btn {
+    border: none;
+    background: transparent;
+    width: 32px;
+    height: 32px;
+    display: none;
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: all ease-out 0.2s;
+    }
+    &:hover svg {
+      fill: $primary-color;
+    }
+  }
+}

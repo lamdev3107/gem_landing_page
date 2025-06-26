@@ -1,0 +1,23 @@
+.get-demo {
+  margin-top: 144px;
+  background-color: $neutral-silver-color;
+  padding: 32px;
+  &__title {
+    text-align: center;
+    @extend .headline-1;
+    margin: 0 auto;
+    width: 887px;
+    max-width: fit-content;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__button {
+    @extend .button--primary;
+    padding: 14px 32px;
+    border: none;
+    margin-top: 16px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+}

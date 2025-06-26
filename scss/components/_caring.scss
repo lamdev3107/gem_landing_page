@@ -1,0 +1,44 @@
+.caring {
+  @extend .section;
+  @extend .container;
+  &__card-grid {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+    justify-content: space-between;
+    .card-item {
+      position: relative;
+      max-width: 400px;
+      &__img {
+        width: 100%;
+      }
+      &__content {
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        height: fit-content;
+        @extend .shadow-lg;
+        border-radius: 8px;
+        transform: translate(-50%, -50%);
+        background-color: $neutral-silver-color;
+        padding: 16px;
+        p {
+          @extend .headline-4;
+          color: $neutral-grey-color;
+          text-align: center;
+          height: fit-content;
+        }
+        a {
+          margin-top: 16px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $primary-color;
+          @extend .headline-4;
+        }
+      }
+    }
+  }
+}

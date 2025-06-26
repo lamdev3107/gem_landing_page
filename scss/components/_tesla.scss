@@ -1,0 +1,69 @@
+.tesla {
+  background-color: $neutral-silver-color;
+  &__container {
+    @extend .container;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  &__left {
+    img {
+      width: 326px;
+      height: 326px;
+      border-radius: 8px;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: fit-content;
+    .top-content {
+      &__para {
+        max-width: 748px;
+        width: fit-content;
+        @extend .body-2;
+        color: $neutral-grey-color;
+        margin-bottom: 16px;
+      }
+      .person {
+        &__name {
+          color: $primary-color;
+          @extend .headline-4;
+          margin-bottom: 8px;
+        }
+        &__organization {
+          color: $neutral-l-grey-color;
+          @extend .body-2;
+        }
+      }
+    }
+
+    .bottom-content {
+      display: flex;
+      column-gap: 32px;
+      row-gap: 8px;
+      flex-wrap: wrap;
+
+      &__list-icon {
+        display: flex;
+        gap: 36px;
+        img {
+          width: 44px;
+          height: 44px;
+        }
+      }
+
+      &__link {
+        display: flex;
+        align-items: center;
+        @extend .headline-4;
+        text-decoration: none;
+        color: $primary-color;
+        vertical-align: middle;
+      }
+    }
+  }
+}

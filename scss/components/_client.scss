@@ -1,0 +1,19 @@
+// Clients Section
+.clients {
+  text-align: center;
+  &__logo-grid {
+    display: flex;
+    min-height: fit-content;
+    height: 98px;
+    margin: 16px auto 0;
+    max-width: 1152px;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

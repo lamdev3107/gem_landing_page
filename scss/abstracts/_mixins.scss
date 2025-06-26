@@ -1,0 +1,16 @@
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin card-shadow(
+  $offset-y,
+  $blur-radius,
+  $opacity,
+  $offset-x: 0px,
+  $spread-radius: 0px
+) {
+  box-shadow: $offset-x $offset-y $blur-radius $spread-radius
+    rgba($shadow-color-base, $opacity);
+}

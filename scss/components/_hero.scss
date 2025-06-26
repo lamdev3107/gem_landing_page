@@ -1,0 +1,40 @@
+// Hero Section
+.hero {
+  min-height: fit-content;
+  background-color: $neutral-silver-color;
+
+  .hero__container {
+    @include flex-center;
+    @extend .container;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    justify-content: space-between;
+    gap: 32px;
+    height: fit-content;
+    .hero__content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .hero__title {
+        @extend .headline-1;
+        color: $secondary-color;
+        &--green {
+          color: $primary-color;
+          display: block;
+          line-height: 50px;
+        }
+      }
+      .hero__description {
+        @extend .body-2;
+        color: $neutral-grey-color;
+      }
+      .hero__image {
+        img {
+          width: 272px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

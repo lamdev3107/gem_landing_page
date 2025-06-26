@@ -1,0 +1,53 @@
+//Local business section
+.local-business {
+  background: $neutral-silver-color;
+  &__container {
+    @extend .section;
+    @extend .container;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    .local-business__left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 540px;
+      max-width: fit-content;
+
+      .local-business__left-title {
+        @extend .headline-2;
+        &--green {
+          color: $primary-color;
+        }
+      }
+      .local-business__left-desc {
+        @extend .body-2;
+      }
+    }
+    .local-business__right {
+      display: grid;
+      max-width: 540px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 30px;
+      .right-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        img {
+          width: 48px;
+          height: 48px;
+        }
+
+        &__number {
+          @extend .headline-3;
+        }
+        &__desc {
+          @extend .body-2;
+          color: $neutral-grey-color;
+        }
+      }
+    }
+  }
+}
