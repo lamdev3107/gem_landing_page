@@ -49,6 +49,13 @@
             Sign Up
           </button>
         </div>
+        <button class="header__hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -402,53 +409,87 @@
     </div>
 
     <footer>
-      <div class="left-content">
-        <img
-          src="assets/icons/Logo-white.svg"
-          alt="Logo White"
-          class="left-content__logo"
-        />
-        <div class="left-content__copyright">
-          <p>Copyright © 2020 Nexcent ltd.</p>
-          <p>All rights reserved</p>
+      <div class="footer-container">
+        <div class="left-content">
+          <img
+            src="assets/icons/Logo-white.svg"
+            alt="Logo White"
+            class="left-content__logo"
+          />
+          <div class="left-content__copyright">
+            <p>Copyright © 2020 Nexcent ltd.</p>
+            <p>All rights reserved</p>
+          </div>
+          <div class="left-content__social">
+            <a href="#"><img src="assets/icons/instagram.svg" alt="insta" /></a>
+            <a href="#"><img src="assets/icons/dribble.svg" alt="dribble" /></a>
+            <a href="#"><img src="assets/icons/twitter.svg" alt="twitter" /></a>
+            <a href="#"><img src="assets/icons/youtube.svg" alt="youtube" /></a>
+          </div>
         </div>
-        <div class="left-content__social">
-          <a href="#"><img src="assets/icons/instagram.svg" alt="insta" /></a>
-          <a href="#"><img src="assets/icons/dribble.svg" alt="dribble" /></a>
-          <a href="#"><img src="assets/icons/twitter.svg" alt="twitter" /></a>
-          <a href="#"><img src="assets/icons/youtube.svg" alt="youtube" /></a>
-        </div>
-      </div>
 
-      <div class="right-content">
-        <div class="right-content-items">
-          <h4 class="right-content-items__title">Company</h4>
-          <ul>
-            <li>About us</li>
-            <li>Blog</li>
-            <li>Contact us</li>
-            <li>Pricing</li>
-            <li>Testimonials</li>
-          </ul>
-        </div>
-        <div class="right-content-items">
-          <h4 class="right-content-items__title">Support</h4>
-          <ul>
-            <li>Help center</li>
-            <li>Term of service</li>
-            <li>Legal</li>
-            <li>Privacy policy</li>
-            <li>Status</li>
-          </ul>
-        </div>
-        <div class="right-content-items">
-          <h4 class="right-content-items__title">Stay up to date</h4>
-          <div class="right-content__email">
-            <input type="email" />
-            <img src="assets/icons/send.svg" alt="send icon" />
+        <div class="right-content">
+          <div class="right-content-items">
+            <h4 class="right-content-items__title">Company</h4>
+            <ul>
+              <li>About us</li>
+              <li>Blog</li>
+              <li>Contact us</li>
+              <li>Pricing</li>
+              <li>Testimonials</li>
+            </ul>
+          </div>
+          <div class="right-content-items">
+            <h4 class="right-content-items__title">Support</h4>
+            <ul>
+              <li>Help center</li>
+              <li>Term of service</li>
+              <li>Legal</li>
+              <li>Privacy policy</li>
+              <li>Status</li>
+            </ul>
+          </div>
+          <div class="right-content-items">
+            <h4 class="right-content-items__title">Stay up to date</h4>
+            <div class="right-content-items__email">
+              <input type="email" placeholder="Your email address" />
+              <button class="right-content-items__send-btn">
+                <img src="assets/icons/send.svg" alt="send icon" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </footer>
+    <div class="overlay">
+      <aside class="hamburger-menu">
+        <ul class="hamburger-menu__list">
+          <li class="hamburger-menu__item">
+            <a
+              href="#"
+              class="hamburger-menu__link hamburger-menu__link--active"
+              >Home</a
+            >
+          </li>
+          <li class="hamburger-menu__item">
+            <a href="#" class="hamburger-menu__link">Service</a>
+          </li>
+          <li class="hamburger-menu__item">
+            <a href="#" class="hamburger-menu__link">Feature</a>
+          </li>
+          <li class="hamburger-menu__item">
+            <a href="#" class="hamburger-menu__link">Product</a>
+          </li>
+          <li class="hamburger-menu__item">
+            <a href="#" class="hamburger-menu__link">Testimonial</a>
+          </li>
+          <li class="hamburger-menu__item">
+            <a href="#" class="hamburger-menu__link">FAQ</a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
