@@ -1,10 +1,14 @@
+@use "../abstracts/variables" as *;
+@use "../base" as *; // Sẽ tìm sass/base/_index.scss và xuất tất cả ra ngoài
+
 footer {
   background-color: $neutral-black-color;
   .footer-container {
     @extend .container;
+    padding-top: 64px;
+    padding-bottom: 64px;
     display: flex;
     justify-content: space-between;
-    padding: 64px 165px;
   }
 
   .left-content {
@@ -83,6 +87,35 @@ footer {
           top: 50%;
           transform: translateY(-50%);
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  footer {
+    gap: 20px;
+    .right-content {
+      gap: 20px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer-container {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+    .left-content {
+      gap: 20px;
+    }
+    .right-content {
+      flex-wrap: wrap;
+      gap: 40px;
+      &-items {
       }
     }
   }

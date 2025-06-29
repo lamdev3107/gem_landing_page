@@ -17,3 +17,13 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .clients {
+    text-align: center;
+    &__logo-grid {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+}

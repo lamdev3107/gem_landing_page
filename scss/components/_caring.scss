@@ -1,3 +1,9 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../base" as *;
+
+@use "../components/shadow" as *;
+
 .caring {
   @extend .section;
   @extend .container;
@@ -21,11 +27,11 @@
         @extend .shadow-lg;
         border-radius: 8px;
         transform: translate(-50%, -50%);
-        background-color: $neutral-silver-color;
+        background-color: var.$neutral-silver-color;
         padding: 16px;
         p {
           @extend .headline-4;
-          color: $neutral-grey-color;
+          color: var.$neutral-grey-color;
           text-align: center;
           height: fit-content;
         }
@@ -33,12 +39,22 @@
           margin-top: 16px;
           text-decoration: none;
           display: flex;
+          gap: 8px;
           align-items: center;
           justify-content: center;
-          color: $primary-color;
+          color: var.$primary-color;
           @extend .headline-4;
         }
       }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .caring {
+    &__card-grid {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      row-gap: 144px;
     }
   }
 }

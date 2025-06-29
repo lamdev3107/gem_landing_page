@@ -1,13 +1,17 @@
+@use "../abstracts/variables" as var;
+@use "../components/button" as *;
+@use "../base" as *;
+
 .get-demo {
   margin-top: 144px;
-  background-color: $neutral-silver-color;
+  background-color: var.$neutral-silver-color;
   padding: 32px;
   &__title {
     text-align: center;
     @extend .headline-1;
     margin: 0 auto;
-    width: 887px;
-    max-width: fit-content;
+    width: fit-content;
+    max-width: 887px;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -19,5 +23,16 @@
     display: block;
     margin: 0 auto;
     border-radius: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .get-demo {
+    &__title {
+      font-size: 36px;
+      line-height: 44px;
+      max-width: 100%;
+      text-align: center;
+    }
   }
 }

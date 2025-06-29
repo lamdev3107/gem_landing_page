@@ -1,6 +1,9 @@
+@use "../abstracts/variables" as var;
+@use "../base" as *;
+
 //Local business section
 .local-business {
-  background: $neutral-silver-color;
+  background: var.$neutral-silver-color;
   &__container {
     @extend .section;
     @extend .container;
@@ -18,7 +21,7 @@
       .local-business__left-title {
         @extend .headline-2;
         &--green {
-          color: $primary-color;
+          color: var.$primary-color;
         }
       }
       .local-business__left-desc {
@@ -45,8 +48,25 @@
         }
         &__desc {
           @extend .body-2;
-          color: $neutral-grey-color;
+          color: var.$neutral-grey-color;
         }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .local-business {
+    background: var.$neutral-silver-color;
+    &__container {
+      flex-direction: column;
+      display: flex;
+      gap: 44px;
+      align-items: center;
+      .local-business__left {
+        text-align: center;
+      }
+      .local-business__right {
+        grid-template-columns: repeat(1, 1fr);
       }
     }
   }

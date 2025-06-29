@@ -1,10 +1,14 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../base" as *;
+
 // Hero Section
 .hero {
   min-height: fit-content;
-  background-color: $neutral-silver-color;
+  background-color: var.$neutral-silver-color;
 
   .hero__container {
-    @include flex-center;
+    @include mix.flex-center;
     @extend .container;
     padding-top: 96px;
     padding-bottom: 96px;
@@ -18,16 +22,16 @@
 
       .hero__title {
         @extend .headline-1;
-        color: $secondary-color;
+        color: var.$secondary-color;
         &--green {
-          color: $primary-color;
+          color: var.$primary-color;
           display: block;
           line-height: 50px;
         }
       }
       .hero__description {
         @extend .body-2;
-        color: $neutral-grey-color;
+        color: var.$neutral-grey-color;
       }
       .hero__image {
         img {
@@ -35,6 +39,23 @@
           height: auto;
         }
       }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    .hero__container {
+      flex-direction: column;
+      gap: 64px;
+      align-items: center;
+      text-align: center;
+    }
+    &__content {
+      justify-content: center;
+      align-items: center;
+    }
+    &__title--green {
+      margin-top: 8px;
     }
   }
 }

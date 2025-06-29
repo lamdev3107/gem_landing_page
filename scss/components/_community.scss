@@ -1,3 +1,7 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../base" as *;
+@use "../components/shadow" as *;
 // Community Section
 .community {
   @extend .section;
@@ -36,14 +40,22 @@
       }
       h3 {
         @extend .headline-3;
-        color: $secondary-color;
+        color: var.$secondary-color;
       }
     }
 
     &__description {
       @extend .body-3;
       text-align: center;
-      color: $neutral-grey-color;
+      color: var.$neutral-grey-color;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .community {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 44px;
     }
   }
 }

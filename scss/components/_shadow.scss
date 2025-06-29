@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .shadow-sm {
   @include card-shadow(2px, 2px, 0.6); // offset-y: 2px, blur: 2px, opacity: 60%
 }

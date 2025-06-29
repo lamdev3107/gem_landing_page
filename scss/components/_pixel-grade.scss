@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as var;
+@use "../base" as *;
+
 //Pixel grade section
 .pixel-grade {
   @extend .section;
@@ -31,7 +34,30 @@
       }
       .pixel-grade__text-desc {
         @extend .body-3;
-        color: $neutral-grey-color;
+        color: var.$neutral-grey-color;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .pixel-grade {
+    flex-direction: column;
+    padding-bottom: 44px;
+    gap: 32px;
+    &__content {
+      gap: 20px;
+      .pixel-grade__text-content {
+        .pixel-grade__text-desc {
+          text-align: justify;
+        }
+      }
+    }
+    &__img {
+      width: 100%;
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
       }
     }
   }

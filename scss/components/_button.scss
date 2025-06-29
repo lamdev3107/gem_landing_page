@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 .button {
   padding: 16px 32px;
   border-radius: 4px;

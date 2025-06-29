@@ -1,5 +1,7 @@
 // Reset
-@use "typography";
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "../base/typography" as typ;
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@
 // Common
 body {
   font-family: "Inter", sans-serif;
-  color: $secondary-color;
+  color: var.$secondary-color;
   line-height: 1.5;
 }
 
@@ -61,8 +63,37 @@ button {
     &__desc {
       text-align: center;
       @extend .body-2;
-      color: $neutral-grey-color;
+      color: var.$neutral-grey-color;
       max-width: 628px;
     }
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    padding-right: 88px;
+    padding-left: 88px;
+  }
+
+  footer {
+    gap: 20px;
+    .right-content {
+      gap: 20px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .container {
+    padding-right: 44px;
+    padding-left: 44px;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    margin-top: 80px;
+  }
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }

@@ -1,4 +1,5 @@
 // Mixins
+@use "../abstracts/variables" as var;
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -12,5 +13,5 @@
   $spread-radius: 0px
 ) {
   box-shadow: $offset-x $offset-y $blur-radius $spread-radius
-    rgba($shadow-color-base, $opacity);
+    rgba(var.$shadow-color-base, $opacity);
 }

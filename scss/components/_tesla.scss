@@ -1,5 +1,8 @@
+@use "../abstracts/variables" as var;
+@use "../base" as *;
+
 .tesla {
-  background-color: $neutral-silver-color;
+  background-color: var.$neutral-silver-color;
   &__container {
     @extend .container;
     display: flex;
@@ -25,17 +28,17 @@
         max-width: 748px;
         width: fit-content;
         @extend .body-2;
-        color: $neutral-grey-color;
+        color: var.$neutral-grey-color;
         margin-bottom: 16px;
       }
       .person {
         &__name {
-          color: $primary-color;
+          color: var.$primary-color;
           @extend .headline-4;
           margin-bottom: 8px;
         }
         &__organization {
-          color: $neutral-l-grey-color;
+          color: var.$neutral-l-grey-color;
           @extend .body-2;
         }
       }
@@ -61,9 +64,41 @@
         align-items: center;
         @extend .headline-4;
         text-decoration: none;
-        color: $primary-color;
+        color: var.$primary-color;
         vertical-align: middle;
       }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .tesla {
+    &__container {
+      .top-content {
+        &__para {
+          text-align: justify;
+        }
+      }
+      .bottom-content {
+        flex-direction: column;
+        &__list-icon {
+          flex-wrap: wrap;
+          row-gap: 16px;
+        }
+      }
+    }
+    &__left {
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .tesla {
+    &__container {
+      gap: 8px;
+      flex-direction: column;
+    }
+    &__left {
+      text-align: center;
     }
   }
 }

@@ -1,3 +1,6 @@
+@use "../abstracts/variables" as *;
+@use "../components/button" as *;
+
 .hamburger-menu {
   /* display: none; */
   overflow: hidden;
@@ -47,6 +50,16 @@
       fill: $neutral-silver-color;
       width: 24px;
       height: 24px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hamburger-menu {
+    &.active {
+      width: 100vw;
+    }
+    &.collapsed {
+      width: 0;
     }
   }
 }
