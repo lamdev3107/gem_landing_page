@@ -73,6 +73,12 @@ body {
   font-family: "Inter", sans-serif;
   color: #263238;
   line-height: 1.5;
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+  overflow-y: auto;
 }
 
 ul {
@@ -250,6 +256,7 @@ button {
 .hero {
   min-height: fit-content;
   background-color: #f5f7fa;
+  position: relative;
 }
 .hero .hero__container {
   display: flex;
@@ -279,6 +286,30 @@ button {
 .hero .hero__container .hero__content .hero__image img {
   width: 272px;
   height: auto;
+}
+.hero__indicator {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.hero__indicator-item {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4caf4f;
+  opacity: 30%;
+  border: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+.hero__indicator-item--active {
+  background: #4caf4f;
+  opacity: 100%;
 }
 
 @media (max-width: 768px) {
@@ -351,6 +382,7 @@ button {
   gap: 20px;
 }
 .community-card {
+  flex: 1;
   background-color: #fff;
   border-radius: 8px;
   padding: 24px 32px;
@@ -363,7 +395,6 @@ button {
   gap: 8px;
 }
 .community-card__top-content {
-  height: 144px;
   display: flex;
   gap: 16px;
   flex-direction: column;
@@ -401,6 +432,8 @@ button {
 }
 .pixel-grade__img img {
   height: 329px;
+  width: 100%;
+  object-fit: contain;
 }
 .pixel-grade__content {
   max-width: 600px;
@@ -574,6 +607,10 @@ button {
   .tesla__left {
     text-align: center;
   }
+  .tesla__left img {
+    width: 100%;
+    object-fit: contain;
+  }
 }
 .caring__card-grid {
   margin-top: 16px;
@@ -716,6 +753,8 @@ footer .right-content-items__email {
 footer .right-content-items__email input {
   background-color: transparent;
   outline: none;
+  color: white;
+  height: 100%;
   border: none;
 }
 footer .right-content-items__email input::placeholder {
@@ -751,6 +790,7 @@ footer .right-content-items__email .right-content-items__send-btn {
   }
   footer .left-content {
     gap: 20px;
+    width: 100%;
   }
   footer .right-content {
     flex-wrap: wrap;

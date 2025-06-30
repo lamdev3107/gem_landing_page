@@ -7,488 +7,517 @@
     <link rel="stylesheet" href="scss/style.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="header__container">
-        <a href="#" class="header__logo">
-          <img
-            src="assets/icons/Logo.svg"
-            alt="Nexcent"
-            class="header__logo-img"
-          />
-        </a>
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link header__nav-link--active"
-                >Home</a
-              >
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Service</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Feature</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Product</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Testimonial</a>
-            </li>
-            <li class="header__nav-item">
-              <a href="#" class="header__nav-link">FAQ</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__buttons">
-          <button class="button header__buttons-login button--md">
-            Log In
-          </button>
-          <button class="button header__buttons-signup button--md">
-            Sign Up
-          </button>
-        </div>
-        <button class="header__hamburger-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path
-              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-            />
-          </svg>
-        </button>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero__container">
-        <div class="hero__content">
-          <h1 class="hero__title">
-            Lessons and insights
-            <span class="hero__title--green">from 8 years</span>
-          </h1>
-          <p class="hero__description">
-            Where to grow your business as a photographer: site or social media?
-          </p>
-          <button class="hero__button button button--primary">Register</button>
-        </div>
-        <div class="hero__image">
-          <img
-            src="assets/images/hero_img.svg"
-            alt="Hero Illustration"
-            class="hero__img"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Clients Section -->
-    <section class="section clients">
-      <div class="clients__container container">
-        <div class="section-head">
-          <h2 class="section-head__title">Our Clients</h2>
-          <p class="section-head__desc">
-            We have been working with some Fortune 500+ clients
-          </p>
-        </div>
-
-        <div class="clients__logo-grid">
-          <img src="assets/icons/client-1.svg" alt="client-1" />
-          <img src="assets/icons/client-2.svg" alt="client-2" />
-          <img src="assets/icons/client-3.svg" alt="client-3" />
-          <img src="assets/icons/client-4.svg" alt="client-4" />
-          <img src="assets/icons/client-5.svg" alt="client-5" />
-          <img src="assets/icons/client-6.svg" alt="client-6" />
-          <img src="assets/icons/client-7.svg" alt="client-7" />
-          <!-- Add client logos here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Community Section -->
-    <section class="community">
-      <div class="community__container">
-        <div class="section-head">
-          <h2 class="section-head__title">
-            Manage your entire community in a single system
-          </h2>
-          <p class="section-head__desc">Who is Nexcent suitable for?</p>
-        </div>
-
-        <div class="community__grid">
-          <div class="community-card">
-            <div class="community-card__top-content">
-              <img
-                src="assets/icons/community-1.svg"
-                alt="National"
-                class="community-card__icon"
-              />
-              <h3 class="community-card__title">Membership Organisations</h3>
-            </div>
-            <p class="community-card__description">
-              Our membership management software provides full automation of
-              membership renewals and payments
-            </p>
-          </div>
-
-          <div class="community-card">
-            <div class="community-card__top-content">
-              <img
-                src="assets/icons/community-2.svg"
-                alt="National"
-                class="community-card__icon"
-              />
-              <h3 class="community-card__title">National Associations</h3>
-            </div>
-            <p class="community-card__description">
-              Our membership management software provides full automation of
-              membership renewals and payments
-            </p>
-          </div>
-
-          <div class="community-card">
-            <div class="community-card__top-content">
-              <img
-                src="assets/icons/community-3.svg"
-                alt="National"
-                class="community-card__icon"
-              />
-              <h3 class="community-card__title">Clubs And Groups</h3>
-            </div>
-            <p class="community-card__description">
-              Our membership management software provides full automation of
-              membership renewals and payments
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pixel-grade">
-      <div class="pixel-grade__img">
-        <img src="assets/images/rafiki.svg" alt="rafiki" />
-      </div>
-      <div class="pixel-grade__content">
-        <div class="pixel-grade__text-content">
-          <h2 class="pixel-grade__text-title">
-            The unseen of spending three years at Pixelgrade
-          </h2>
-          <p class="pixel-grade__text-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-            Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
-            tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
-            Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
-            elementum pulvinar odio.
-          </p>
-        </div>
-        <button class="button button--md button--primary">Learn more</button>
-      </div>
-    </section>
-
-    <section class="local-business">
-      <div class="local-business__container">
-        <!-- Left content  -->
-        <div class="local-business__left">
-          <h2 class="local-business__left-title">
-            Helping a local
-            <br />
-            <span class="local-business__left-title--green">
-              business reinvent itself
-            </span>
-          </h2>
-          <p class="local-business__left-desc">
-            We reached here with our hard work and dedication
-          </p>
-        </div>
-
-        <!-- Right content  -->
-        <div class="local-business__right">
-          <div class="right-item">
+    <main>
+      <!-- Header -->
+      <header class="header">
+        <div class="header__container">
+          <a href="#" class="header__logo">
             <img
-              src="assets/icons/local-business-icon-1.svg"
-              alt=""
-              class="right-item__icon"
+              src="assets/icons/Logo.svg"
+              alt="Nexcent"
+              class="header__logo-img"
             />
-            <div class="right-item__texts">
-              <p class="right-item__number">2,245,341</p>
-              <p class="right-item__desc">Members</p>
-            </div>
-          </div>
-          <div class="right-item">
-            <img
-              src="assets/icons/local-business-icon-2.svg"
-              alt=""
-              class="right-item__icon"
-            />
-            <div class="right-item__texts">
-              <p class="right-item__number">46,328</p>
-              <p class="right-item__desc">Clubs</p>
-            </div>
-          </div>
-          <div class="right-item">
-            <img
-              src="assets/icons/local-business-icon-3.svg"
-              alt=""
-              class="right-item__icon"
-            />
-            <div class="right-item__texts">
-              <p class="right-item__number">828,867</p>
-              <p class="right-item__desc">Event Bookings</p>
-            </div>
-          </div>
-          <div class="right-item">
-            <img
-              src="assets/icons/local-business-icon-4.svg"
-              alt=""
-              class="right-item__icon"
-            />
-            <div class="right-item__texts">
-              <p class="right-item__number">1,926,436</p>
-              <p class="right-item__desc">Payments</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pixel-grade">
-      <div class="pixel-grade__img">
-        <img src="assets/images/how-to-img.svg" alt="how-to-img" />
-      </div>
-      <div class="pixel-grade__content">
-        <div class="pixel-grade__text-content">
-          <h2 class="pixel-grade__text-title">
-            How to design your site footer like we did
-          </h2>
-          <p class="pixel-grade__text-desc">
-            Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
-            augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque
-            elit erat a magna. Donec quis erat at libero ultrices mollis. In hac
-            habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi
-            facilisis finibus. In euismod augue vitae nisi ultricies, non
-            aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus
-            efficitur quis massa. Praesent felis est, finibus et nisi ac,
-            hendrerit venenatis libero. Donec consectetur faucibus ipsum id
-            gravida.
-          </p>
-        </div>
-        <button class="button button--md button--primary">Learn more</button>
-      </div>
-    </section>
-
-    <section class="tesla">
-      <div class="tesla__container">
-        <div class="tesla__left">
-          <img src="assets/images/tesla.png" alt="tesla logo" />
-        </div>
-        <div class="tesla__right">
-          <div class="top-content">
-            <p class="top-content__para">
-              Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
-              lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
-              enim metus. Vivamus sed libero ornare, tristique quam in, gravida
-              enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet
-              elit at ligula molestie, nec molestie mi blandit. Suspendisse
-              cursus tellus sed augue ultrices, quis tristique nulla sodales.
-              Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse
-              potenti. Quisque malesuada enim sapien, vitae placerat ante
-              feugiat eget. Quisque vulputate odio neque, eget efficitur libero
-              condimentum id. Curabitur id nibh id sem dignissim finibus ac sit
-              amet magna.
-            </p>
-            <div class="person">
-              <p class="person__name">Tim Smith</p>
-              <p class="person__organization">
-                British Dragon Boat Racing Association
-              </p>
-            </div>
-          </div>
-          <div class="bottom-content">
-            <div class="bottom-content__list-icon">
-              <img src="assets/icons/client-1.svg" alt="" />
-              <img src="assets/icons/client-2.svg" alt="" />
-              <img src="assets/icons/client-3.svg" alt="" />
-              <img src="assets/icons/client-4.svg" alt="" />
-              <img src="assets/icons/client-5.svg" alt="" />
-              <img src="assets/icons/client-6.svg" alt="" />
-              <img src="assets/icons/client-7.svg" alt="" />
-            </div>
-            <a href="#" class="bottom-content__link">
-              Meet all customers
-              <img src="assets/icons/arrow-right.svg" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="caring">
-      <div class="section-head">
-        <h2 class="section-head__title">Caring is the new marketing</h2>
-        <p class="section-head__desc">
-          The Nexcent blog is the best place to read about the latest membership
-          insights, trends and more. See who's joining the community, read about
-          how our community are increasing their membership income and lot's
-          more.​
-        </p>
-      </div>
-      <div class="caring__card-grid">
-        <div class="card-item">
-          <img
-            src="assets/images/image 18.png"
-            alt="caring-img-1"
-            class="card-item__img"
-          />
-          <div class="card-item__content">
-            <p class="card-item__title">
-              Creating Streamlined Safeguarding Processes with OneRen
-            </p>
-            <a href="" class="card-item__read-more">
-              Read more
-              <img src="assets/icons/arrow-right.svg" alt="arrow-right-icon" />
-            </a>
-          </div>
-        </div>
-        <div class="card-item">
-          <img
-            src="assets/images/image 19.png"
-            alt="caring-img-1"
-            class="card-item__img"
-          />
-          <div class="card-item__content">
-            <p class="card-item__title">
-              What are your safeguarding responsibilities and how can you manage
-              them?
-            </p>
-            <a href="" class="card-item__read-more">
-              Read more
-              <img src="assets/icons/arrow-right.svg" alt="arrow-right-icon" />
-            </a>
-          </div>
-        </div>
-        <div class="card-item">
-          <img
-            src="assets/images/image 20.png"
-            alt="caring-img-1"
-            class="card-item__img"
-          />
-          <div class="card-item__content">
-            <p class="card-item__title">
-              Revamping the Membership Model with Triathlon Australia
-            </p>
-            <a href="" class="card-item__read-more">
-              Read more
-              <img src="assets/icons/arrow-right.svg" alt="arrow-right-icon" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="get-demo">
-      <h2 class="get-demo__title">
-        Pellentesque suscipit fringilla libero eu.
-      </h2>
-      <button class="get-demo__button">Get a Demo</button>
-    </div>
-
-    <footer>
-      <div class="footer-container">
-        <div class="left-content">
-          <img
-            src="assets/icons/Logo-white.svg"
-            alt="Logo White"
-            class="left-content__logo"
-          />
-          <div class="left-content__copyright">
-            <p>Copyright © 2020 Nexcent ltd.</p>
-            <p>All rights reserved</p>
-          </div>
-          <div class="left-content__social">
-            <a href="#"><img src="assets/icons/instagram.svg" alt="insta" /></a>
-            <a href="#"><img src="assets/icons/dribble.svg" alt="dribble" /></a>
-            <a href="#"><img src="assets/icons/twitter.svg" alt="twitter" /></a>
-            <a href="#"><img src="assets/icons/youtube.svg" alt="youtube" /></a>
-          </div>
-        </div>
-
-        <div class="right-content">
-          <div class="right-content-items">
-            <h4 class="right-content-items__title">Company</h4>
-            <ul>
-              <li>About us</li>
-              <li>Blog</li>
-              <li>Contact us</li>
-              <li>Pricing</li>
-              <li>Testimonials</li>
+          </a>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link header__nav-link--active"
+                  >Home</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Service</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Feature</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Product</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">Testimonial</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#" class="header__nav-link">FAQ</a>
+              </li>
             </ul>
-          </div>
-          <div class="right-content-items">
-            <h4 class="right-content-items__title">Support</h4>
-            <ul>
-              <li>Help center</li>
-              <li>Term of service</li>
-              <li>Legal</li>
-              <li>Privacy policy</li>
-              <li>Status</li>
-            </ul>
-          </div>
-          <div class="right-content-items">
-            <h4 class="right-content-items__title">Stay up to date</h4>
-            <div class="right-content-items__email">
-              <input type="email" placeholder="Your email address" />
-              <button class="right-content-items__send-btn">
-                <img src="assets/icons/send.svg" alt="send icon" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="overlay">
-      <aside class="hamburger-menu">
-        <ul class="hamburger-menu__list">
-          <li class="hamburger-menu__item">
-            <a
-              href="#"
-              class="hamburger-menu__link hamburger-menu__link--active"
-              >Home</a
-            >
-          </li>
-          <li class="hamburger-menu__item">
-            <a href="#" class="hamburger-menu__link">Service</a>
-          </li>
-          <li class="hamburger-menu__item">
-            <a href="#" class="hamburger-menu__link">Feature</a>
-          </li>
-          <li class="hamburger-menu__item">
-            <a href="#" class="hamburger-menu__link">Product</a>
-          </li>
-          <li class="hamburger-menu__item">
-            <a href="#" class="hamburger-menu__link">Testimonial</a>
-          </li>
-          <li class="hamburger-menu__item">
-            <a href="#" class="hamburger-menu__link">FAQ</a>
-          </li>
-          <div class="hamburger-menu__item">
-            <button class="hamburger-menu__button-login button--md">
+          </nav>
+          <div class="header__buttons">
+            <button class="button header__buttons-login button--md">
               Log In
             </button>
-            <button class="hamburger-menu__button-signup button--md">
+            <button class="button header__buttons-signup button--md">
               Sign Up
             </button>
           </div>
-        </ul>
-        <button class="hamburger-menu__close">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-            <path
-              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+          <button class="header__hamburger-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Lessons and insights
+              <span class="hero__title--green">from 8 years</span>
+            </h1>
+            <p class="hero__description">
+              Where to grow your business as a photographer: site or social
+              media?
+            </p>
+            <button class="hero__button button button--primary">
+              Register
+            </button>
+          </div>
+          <div class="hero__image">
+            <img
+              src="assets/images/hero_img.svg"
+              alt="Hero Illustration"
+              class="hero__img"
             />
-          </svg>
-        </button>
-      </aside>
-    </div>
+          </div>
+        </div>
+        <div class="hero__indicator">
+          <button
+            class="hero__indicator-item hero__indicator-item--active"
+          ></button>
+          <button class="hero__indicator-item"></button>
+          <button class="hero__indicator-item"></button>
+        </div>
+      </section>
+
+      <!-- Clients Section -->
+      <section class="section clients">
+        <div class="clients__container container">
+          <div class="section-head">
+            <h2 class="section-head__title">Our Clients</h2>
+            <p class="section-head__desc">
+              We have been working with some Fortune 500+ clients
+            </p>
+          </div>
+
+          <div class="clients__logo-grid">
+            <img src="assets/icons/client-1.svg" alt="client-1" />
+            <img src="assets/icons/client-2.svg" alt="client-2" />
+            <img src="assets/icons/client-3.svg" alt="client-3" />
+            <img src="assets/icons/client-4.svg" alt="client-4" />
+            <img src="assets/icons/client-5.svg" alt="client-5" />
+            <img src="assets/icons/client-6.svg" alt="client-6" />
+            <img src="assets/icons/client-7.svg" alt="client-7" />
+            <!-- Add client logos here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Section -->
+      <section class="community">
+        <div class="community__container">
+          <div class="section-head">
+            <h2 class="section-head__title">
+              Manage your entire community in a single system
+            </h2>
+            <p class="section-head__desc">Who is Nexcent suitable for?</p>
+          </div>
+
+          <div class="community__grid">
+            <div class="community-card">
+              <div class="community-card__top-content">
+                <img
+                  src="assets/icons/community-1.svg"
+                  alt="National"
+                  class="community-card__icon"
+                />
+                <h3 class="community-card__title">Membership Organisations</h3>
+              </div>
+              <p class="community-card__description">
+                Our membership management software provides full automation of
+                membership renewals and payments
+              </p>
+            </div>
+
+            <div class="community-card">
+              <div class="community-card__top-content">
+                <img
+                  src="assets/icons/community-2.svg"
+                  alt="National"
+                  class="community-card__icon"
+                />
+                <h3 class="community-card__title">National Associations</h3>
+              </div>
+              <p class="community-card__description">
+                Our membership management software provides full automation of
+                membership renewals and payments
+              </p>
+            </div>
+
+            <div class="community-card">
+              <div class="community-card__top-content">
+                <img
+                  src="assets/icons/community-3.svg"
+                  alt="National"
+                  class="community-card__icon"
+                />
+                <h3 class="community-card__title">Clubs And Groups</h3>
+              </div>
+              <p class="community-card__description">
+                Our membership management software provides full automation of
+                membership renewals and payments
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pixel-grade">
+        <div class="pixel-grade__img">
+          <img src="assets/images/rafiki.svg" alt="rafiki" />
+        </div>
+        <div class="pixel-grade__content">
+          <div class="pixel-grade__text-content">
+            <h2 class="pixel-grade__text-title">
+              The unseen of spending three years at Pixelgrade
+            </h2>
+            <p class="pixel-grade__text-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+              Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+              tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+              Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+              elementum pulvinar odio.
+            </p>
+          </div>
+          <button class="button button--md button--primary">Learn more</button>
+        </div>
+      </section>
+
+      <section class="local-business">
+        <div class="local-business__container">
+          <!-- Left content  -->
+          <div class="local-business__left">
+            <h2 class="local-business__left-title">
+              Helping a local
+              <br />
+              <span class="local-business__left-title--green">
+                business reinvent itself
+              </span>
+            </h2>
+            <p class="local-business__left-desc">
+              We reached here with our hard work and dedication
+            </p>
+          </div>
+
+          <!-- Right content  -->
+          <div class="local-business__right">
+            <div class="right-item">
+              <img
+                src="assets/icons/local-business-icon-1.svg"
+                alt=""
+                class="right-item__icon"
+              />
+              <div class="right-item__texts">
+                <p class="right-item__number">2,245,341</p>
+                <p class="right-item__desc">Members</p>
+              </div>
+            </div>
+            <div class="right-item">
+              <img
+                src="assets/icons/local-business-icon-2.svg"
+                alt=""
+                class="right-item__icon"
+              />
+              <div class="right-item__texts">
+                <p class="right-item__number">46,328</p>
+                <p class="right-item__desc">Clubs</p>
+              </div>
+            </div>
+            <div class="right-item">
+              <img
+                src="assets/icons/local-business-icon-3.svg"
+                alt=""
+                class="right-item__icon"
+              />
+              <div class="right-item__texts">
+                <p class="right-item__number">828,867</p>
+                <p class="right-item__desc">Event Bookings</p>
+              </div>
+            </div>
+            <div class="right-item">
+              <img
+                src="assets/icons/local-business-icon-4.svg"
+                alt=""
+                class="right-item__icon"
+              />
+              <div class="right-item__texts">
+                <p class="right-item__number">1,926,436</p>
+                <p class="right-item__desc">Payments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pixel-grade">
+        <div class="pixel-grade__img">
+          <img src="assets/images/how-to-img.svg" alt="how-to-img" />
+        </div>
+        <div class="pixel-grade__content">
+          <div class="pixel-grade__text-content">
+            <h2 class="pixel-grade__text-title">
+              How to design your site footer like we did
+            </h2>
+            <p class="pixel-grade__text-desc">
+              Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
+              augue nec tincidunt molestie, massa nunc varius arcu, at
+              scelerisque elit erat a magna. Donec quis erat at libero ultrices
+              mollis. In hac habitasse platea dictumst. Vivamus vehicula leo
+              dui, at porta nisi facilisis finibus. In euismod augue vitae nisi
+              ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla
+              commodo faucibus efficitur quis massa. Praesent felis est, finibus
+              et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus
+              ipsum id gravida.
+            </p>
+          </div>
+          <button class="button button--md button--primary">Learn more</button>
+        </div>
+      </section>
+
+      <section class="tesla">
+        <div class="tesla__container">
+          <div class="tesla__left">
+            <img src="assets/images/tesla.png" alt="tesla logo" />
+          </div>
+          <div class="tesla__right">
+            <div class="top-content">
+              <p class="top-content__para">
+                Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+                lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin
+                eu enim metus. Vivamus sed libero ornare, tristique quam in,
+                gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi
+                laoreet elit at ligula molestie, nec molestie mi blandit.
+                Suspendisse cursus tellus sed augue ultrices, quis tristique
+                nulla sodales. Suspendisse eget lorem eu turpis vestibulum
+                pretium. Suspendisse potenti. Quisque malesuada enim sapien,
+                vitae placerat ante feugiat eget. Quisque vulputate odio neque,
+                eget efficitur libero condimentum id. Curabitur id nibh id sem
+                dignissim finibus ac sit amet magna.
+              </p>
+              <div class="person">
+                <p class="person__name">Tim Smith</p>
+                <p class="person__organization">
+                  British Dragon Boat Racing Association
+                </p>
+              </div>
+            </div>
+            <div class="bottom-content">
+              <div class="bottom-content__list-icon">
+                <img src="assets/icons/client-1.svg" alt="" />
+                <img src="assets/icons/client-2.svg" alt="" />
+                <img src="assets/icons/client-3.svg" alt="" />
+                <img src="assets/icons/client-4.svg" alt="" />
+                <img src="assets/icons/client-5.svg" alt="" />
+                <img src="assets/icons/client-6.svg" alt="" />
+                <img src="assets/icons/client-7.svg" alt="" />
+              </div>
+              <a href="#" class="bottom-content__link">
+                Meet all customers
+                <img src="assets/icons/arrow-right.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="caring">
+        <div class="section-head">
+          <h2 class="section-head__title">Caring is the new marketing</h2>
+          <p class="section-head__desc">
+            The Nexcent blog is the best place to read about the latest
+            membership insights, trends and more. See who's joining the
+            community, read about how our community are increasing their
+            membership income and lot's more.​
+          </p>
+        </div>
+        <div class="caring__card-grid">
+          <div class="card-item">
+            <img
+              src="assets/images/image 18.png"
+              alt="caring-img-1"
+              class="card-item__img"
+            />
+            <div class="card-item__content">
+              <p class="card-item__title">
+                Creating Streamlined Safeguarding Processes with OneRen
+              </p>
+              <a href="" class="card-item__read-more">
+                Read more
+                <img
+                  src="assets/icons/arrow-right.svg"
+                  alt="arrow-right-icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="card-item">
+            <img
+              src="assets/images/image 19.png"
+              alt="caring-img-1"
+              class="card-item__img"
+            />
+            <div class="card-item__content">
+              <p class="card-item__title">
+                What are your safeguarding responsibilities and how can you
+                manage them?
+              </p>
+              <a href="" class="card-item__read-more">
+                Read more
+                <img
+                  src="assets/icons/arrow-right.svg"
+                  alt="arrow-right-icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="card-item">
+            <img
+              src="assets/images/image 20.png"
+              alt="caring-img-1"
+              class="card-item__img"
+            />
+            <div class="card-item__content">
+              <p class="card-item__title">
+                Revamping the Membership Model with Triathlon Australia
+              </p>
+              <a href="" class="card-item__read-more">
+                Read more
+                <img
+                  src="assets/icons/arrow-right.svg"
+                  alt="arrow-right-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="get-demo">
+        <h2 class="get-demo__title">
+          Pellentesque suscipit fringilla libero eu.
+        </h2>
+        <button class="get-demo__button">Get a Demo</button>
+      </div>
+
+      <footer>
+        <div class="footer-container">
+          <div class="left-content">
+            <img
+              src="assets/icons/Logo-white.svg"
+              alt="Logo White"
+              class="left-content__logo"
+            />
+            <div class="left-content__copyright">
+              <p>Copyright © 2020 Nexcent ltd.</p>
+              <p>All rights reserved</p>
+            </div>
+            <div class="left-content__social">
+              <a href="#"
+                ><img src="assets/icons/instagram.svg" alt="insta"
+              /></a>
+              <a href="#"
+                ><img src="assets/icons/dribble.svg" alt="dribble"
+              /></a>
+              <a href="#"
+                ><img src="assets/icons/twitter.svg" alt="twitter"
+              /></a>
+              <a href="#"
+                ><img src="assets/icons/youtube.svg" alt="youtube"
+              /></a>
+            </div>
+          </div>
+
+          <div class="right-content">
+            <div class="right-content-items">
+              <h4 class="right-content-items__title">Company</h4>
+              <ul>
+                <li>About us</li>
+                <li>Blog</li>
+                <li>Contact us</li>
+                <li>Pricing</li>
+                <li>Testimonials</li>
+              </ul>
+            </div>
+            <div class="right-content-items">
+              <h4 class="right-content-items__title">Support</h4>
+              <ul>
+                <li>Help center</li>
+                <li>Term of service</li>
+                <li>Legal</li>
+                <li>Privacy policy</li>
+                <li>Status</li>
+              </ul>
+            </div>
+            <div class="right-content-items">
+              <h4 class="right-content-items__title">Stay up to date</h4>
+              <div class="right-content-items__email">
+                <input type="email" placeholder="Your email address" />
+                <button class="right-content-items__send-btn">
+                  <img src="assets/icons/send.svg" alt="send icon" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="overlay">
+        <aside class="hamburger-menu">
+          <ul class="hamburger-menu__list">
+            <li class="hamburger-menu__item">
+              <a
+                href="#"
+                class="hamburger-menu__link hamburger-menu__link--active"
+                >Home</a
+              >
+            </li>
+            <li class="hamburger-menu__item">
+              <a href="#" class="hamburger-menu__link">Service</a>
+            </li>
+            <li class="hamburger-menu__item">
+              <a href="#" class="hamburger-menu__link">Feature</a>
+            </li>
+            <li class="hamburger-menu__item">
+              <a href="#" class="hamburger-menu__link">Product</a>
+            </li>
+            <li class="hamburger-menu__item">
+              <a href="#" class="hamburger-menu__link">Testimonial</a>
+            </li>
+            <li class="hamburger-menu__item">
+              <a href="#" class="hamburger-menu__link">FAQ</a>
+            </li>
+            <div class="hamburger-menu__item">
+              <button class="hamburger-menu__button-login button--md">
+                Log In
+              </button>
+              <button class="hamburger-menu__button-signup button--md">
+                Sign Up
+              </button>
+            </div>
+          </ul>
+          <button class="hamburger-menu__close">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <path
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+              />
+            </svg>
+          </button>
+        </aside>
+      </div>
+    </main>
 
     <script src="main.js"></script>
   </body>

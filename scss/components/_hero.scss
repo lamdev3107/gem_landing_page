@@ -6,7 +6,7 @@
 .hero {
   min-height: fit-content;
   background-color: var.$neutral-silver-color;
-
+  position: relative;
   .hero__container {
     @include mix.flex-center;
     @extend .container;
@@ -38,6 +38,30 @@
           width: 272px;
           height: auto;
         }
+      }
+    }
+  }
+  &__indicator {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    &-item {
+      cursor: pointer;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var.$primary-color;
+      opacity: 30%;
+      border: none;
+      display: inline-block;
+      transition: background 0.3s;
+      &--active {
+        background: var.$primary-color;
+        opacity: 100%;
       }
     }
   }

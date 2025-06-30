@@ -16,6 +16,8 @@
     width: 423px;
     img {
       height: 329px;
+      width: 100%;
+      object-fit: contain;
     }
   }
   &__content {

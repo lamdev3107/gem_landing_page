@@ -73,6 +73,8 @@ footer {
         input {
           background-color: transparent;
           outline: none;
+          color: white;
+          height: 100%;
           border: none;
         }
         input::placeholder {
@@ -111,6 +113,7 @@ footer {
     }
     .left-content {
       gap: 20px;
+      width: 100%;
     }
     .right-content {
       flex-wrap: wrap;
