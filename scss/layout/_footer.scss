@@ -62,6 +62,9 @@ footer {
         flex-direction: column;
         @extend .body-3;
         color: $neutral-silver-color;
+        a {
+          color: $neutral-silver-color;
+        }
       }
       &__email {
         background-color: #515c60;

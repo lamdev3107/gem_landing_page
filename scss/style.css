@@ -742,6 +742,9 @@ footer .right-content-items ul {
   flex-direction: column;
   color: #f5f7fa;
 }
+footer .right-content-items ul a {
+  color: #f5f7fa;
+}
 footer .right-content-items__email {
   background-color: #515c60;
   height: 40px;
