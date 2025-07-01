@@ -69,7 +69,7 @@ footer {
       &__email {
         background-color: #515c60;
         height: 40px;
-        padding: 8px 16px;
+        padding: 0 16px;
         width: 255px;
         position: relative;
         border-radius: 8px;
@@ -121,8 +121,6 @@ footer {
     .right-content {
       flex-wrap: wrap;
       gap: 40px;
-      &-items {
-      }
     }
   }
 }
