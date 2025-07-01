@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Slider Hero
   const slides = document.querySelectorAll(".slider-item");
   const indicators = document.querySelectorAll(".hero__indicator-item");
+  let currentSlide = 0;
 
   function showSlide(index) {
     // Ẩn tất cả slides trước
@@ -68,11 +69,4 @@ document.addEventListener("DOMContentLoaded", function () {
       showSlide(i);
     });
   });
-
-  // Tự động chuyển slide mỗi 5 giây
-  let currentSlide = 0;
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }, 5000);
 });
