@@ -20,8 +20,10 @@
     padding: 14px 32px;
     border: none;
     margin-top: 16px;
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 0 auto;
+    gap: 8px;
     border-radius: 4px;
   }
 }

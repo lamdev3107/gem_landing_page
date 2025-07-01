@@ -7,28 +7,33 @@
   min-height: fit-content;
   background-color: var.$neutral-silver-color;
   position: relative;
-
+  overflow: hidden;
   &__slider {
-    @extend .container;
     position: relative;
-    // overflow: hidden;
-    display: flex;
+    height: 100%;
+    overflow: hidden;
+
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
     .slider-item {
-      overflow: hidden;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
       padding-top: 96px;
       padding-bottom: 96px;
       display: flex;
       justify-content: space-between;
       gap: 32px;
-      width: 0px;
+      min-width: 100%;
+      flex-shrink: 0;
+      pointer-events: none;
+      position: relative;
       height: fit-content;
       max-height: 480px;
+      max-width: 100%;
 
       &.active {
         opacity: 1;
-        width: 100%;
+        pointer-events: auto;
       }
       &__content {
         display: flex;

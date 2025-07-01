@@ -43,9 +43,7 @@
             </ul>
           </nav>
           <div class="header__buttons">
-            <button class="button header__buttons-login button--md">
-              Log In
-            </button>
+            <span class="header__buttons-login">Log In</span>
             <button class="button header__buttons-signup button--md">
               Sign Up
             </button>
@@ -62,80 +60,85 @@
 
       <!-- Hero Section -->
       <section class="hero">
-        <div class="hero__slider">
-          <div class="slider-item active">
-            <div class="slider-item__content">
-              <h1 class="slider-item__title">
-                Lessons and insights
-                <span class="slider-item__title--green">from 8 years</span>
-              </h1>
-              <p class="slider-item__description">
-                Where to grow your business as a photographer: site or social
-                media?
-              </p>
-              <button class="slider-item__button button button--primary">
-                Register
-              </button>
-            </div>
-            <div class="slider-item__image">
-              <img
-                src="assets/images/hero_img.svg"
-                alt="Hero Illustration"
-                class="slider-item__img"
-              />
+        <div class="container">
+          <div class="hero__slider">
+            <div class="slider-wrapper">
+              <div class="slider-item">
+                <div class="slider-item__content">
+                  <h1 class="slider-item__title">
+                    Lessons and insights
+                    <span class="slider-item__title--green">from 8 years</span>
+                  </h1>
+                  <p class="slider-item__description">
+                    Where to grow your business as a photographer: site or
+                    social media?
+                  </p>
+                  <button class="slider-item__button button button--primary">
+                    Register
+                  </button>
+                </div>
+                <div class="slider-item__image">
+                  <img
+                    src="assets/images/hero_img.svg"
+                    alt="Hero Illustration"
+                    class="slider-item__img"
+                  />
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="slider-item__content">
+                  <h1 class="slider-item__title">
+                    Lessons and insights
+                    <span class="slider-item__title--green">from 9 years</span>
+                  </h1>
+                  <p class="slider-item__description">
+                    Where to grow your business as a photographer: site or
+                    social media?
+                  </p>
+                  <button class="slider-item__button button button--primary">
+                    Register
+                  </button>
+                </div>
+                <div class="slider-item__image">
+                  <img
+                    src="assets/images/hero_img.svg"
+                    alt="Hero Illustration"
+                    class="slider-item__img"
+                  />
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="slider-item__content">
+                  <h1 class="slider-item__title">
+                    Lessons and insights
+                    <span class="slider-item__title--green">from 10 years</span>
+                  </h1>
+                  <p class="slider-item__description">
+                    Where to grow your business as a photographer: site or
+                    social media?
+                  </p>
+                  <button class="slider-item__button button button--primary">
+                    Register
+                  </button>
+                </div>
+                <div class="slider-item__image">
+                  <img
+                    src="assets/images/hero_img.svg"
+                    alt="Hero Illustration"
+                    class="slider-item__img"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div class="slider-item">
-            <div class="slider-item__content">
-              <h1 class="slider-item__title">
-                Lessons and insights
-                <span class="slider-item__title--green">from 9 years</span>
-              </h1>
-              <p class="slider-item__description">
-                Where to grow your business as a photographer: site or social
-                media?
-              </p>
-              <button class="slider-item__button button button--primary">
-                Register
-              </button>
-            </div>
-            <div class="slider-item__image">
-              <img
-                src="assets/images/hero_img.svg"
-                alt="Hero Illustration"
-                class="slider-item__img"
-              />
-            </div>
+
+          <div class="hero__indicator">
+            <button
+              class="hero__indicator-item hero__indicator-item--active"
+            ></button>
+            <button class="hero__indicator-item"></button>
+            <button class="hero__indicator-item"></button>
           </div>
-          <div class="slider-item">
-            <div class="slider-item__content">
-              <h1 class="slider-item__title">
-                Lessons and insights
-                <span class="slider-item__title--green">from 10 years</span>
-              </h1>
-              <p class="slider-item__description">
-                Where to grow your business as a photographer: site or social
-                media?
-              </p>
-              <button class="slider-item__button button button--primary">
-                Register
-              </button>
-            </div>
-            <div class="slider-item__image">
-              <img
-                src="assets/images/hero_img.svg"
-                alt="Hero Illustration"
-                class="slider-item__img"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="hero__indicator">
-          <button
-            class="hero__indicator-item hero__indicator-item--active"
-          ></button>
-          <button class="hero__indicator-item"></button>
-          <button class="hero__indicator-item"></button>
         </div>
       </section>
 
@@ -363,7 +366,7 @@
             </div>
             <div class="bottom-content">
               <div class="bottom-content__list-icon">
-                <img src="assets/icons/client-1.svg" alt="" />
+                <img src="assets/icons/tim-smith-logo.svg" alt="" />
                 <img src="assets/icons/client-2.svg" alt="" />
                 <img src="assets/icons/client-3.svg" alt="" />
                 <img src="assets/icons/client-4.svg" alt="" />
@@ -456,7 +459,10 @@
         <h2 class="get-demo__title">
           Pellentesque suscipit fringilla libero eu.
         </h2>
-        <button class="get-demo__button">Get a Demo</button>
+        <button class="get-demo__button">
+          Get a Demo
+          <img src="assets/icons/demo-icon.svg" alt="" />
+        </button>
       </div>
 
       <footer>

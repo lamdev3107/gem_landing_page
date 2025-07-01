@@ -104,7 +104,7 @@ button {
   z-index: 1000;
 }
 
-.container, footer .footer-container, .caring, .tesla__container, .local-business__container, .pixel-grade, .community__container, .hero__slider, .header__container {
+.container, footer .footer-container, .caring, .tesla__container, .local-business__container, .pixel-grade, .community__container, .header__container {
   max-width: 1440px;
   padding-right: 144px;
   padding-left: 144px;
@@ -125,6 +125,7 @@ button {
   max-width: 542px;
   margin: 0 auto;
   margin-bottom: 10px;
+  color: #18191f;
 }
 .section-head__desc {
   text-align: center;
@@ -133,7 +134,7 @@ button {
 }
 
 @media (max-width: 1199px) {
-  .container, footer .footer-container, .caring, .tesla__container, .local-business__container, .pixel-grade, .community__container, .hero__slider, .header__container {
+  .container, footer .footer-container, .caring, .tesla__container, .local-business__container, .pixel-grade, .community__container, .header__container {
     padding-right: 88px;
     padding-left: 88px;
   }
@@ -145,7 +146,7 @@ button {
   }
 }
 @media (max-width: 991px) {
-  .container, footer .footer-container, .caring, .tesla__container, .local-business__container, .pixel-grade, .community__container, .hero__slider, .header__container {
+  .container, footer .footer-container, .caring, .tesla__container, .local-business__container, .pixel-grade, .community__container, .header__container {
     padding-right: 44px;
     padding-left: 44px;
   }
@@ -154,7 +155,7 @@ button {
   .section, .caring, .local-business__container, .pixel-grade, .community {
     margin-top: 80px;
   }
-  .container, footer .footer-container, .caring, .tesla__container, .local-business__container, .pixel-grade, .community__container, .hero__slider, .header__container {
+  .container, footer .footer-container, .caring, .tesla__container, .local-business__container, .pixel-grade, .community__container, .header__container {
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -223,10 +224,15 @@ button {
   padding: 10px 20px;
   border-radius: 6px;
   border: none;
+  font-size: 14px;
+  line-height: 20px;
 }
 .header__buttons-login {
+  cursor: pointer;
+  height: fit-content;
   background: transparent;
-  border: 1px solid #89939e;
+  padding: 0 20px;
+  font-size: 14px;
   color: #4caf4f;
 }
 .header__hamburger-btn {
@@ -257,27 +263,34 @@ button {
   min-height: fit-content;
   background-color: #f5f7fa;
   position: relative;
+  overflow: hidden;
 }
 .hero__slider {
   position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.hero__slider .slider-wrapper {
   display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero__slider .slider-item {
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
   padding-top: 96px;
   padding-bottom: 96px;
   display: flex;
   justify-content: space-between;
   gap: 32px;
-  width: 0px;
+  min-width: 100%;
+  flex-shrink: 0;
+  pointer-events: none;
+  position: relative;
   height: fit-content;
   max-height: 480px;
+  max-width: 100%;
 }
 .hero__slider .slider-item.active {
   opacity: 1;
-  width: 100%;
+  pointer-events: auto;
 }
 .hero__slider .slider-item__content {
   display: flex;
@@ -698,8 +711,10 @@ button {
   padding: 14px 32px;
   border: none;
   margin-top: 16px;
-  display: block;
+  display: flex;
+  align-items: center;
   margin: 0 auto;
+  gap: 8px;
   border-radius: 4px;
 }
 

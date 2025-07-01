@@ -21,4 +21,4 @@ https://lamdev3107.github.io/gem_landing_page/
 
 ## Công nghệ sử dụng
 
-- HTML5 / CSS3 / JavaScript / SCSS
+ôi - HTML5 / CSS3 / JavaScript / SCSS

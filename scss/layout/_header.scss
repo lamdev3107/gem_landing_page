@@ -53,11 +53,16 @@
       padding: 10px 20px;
       border-radius: 6px;
       border: none;
+      font-size: 14px;
+      line-height: 20px;
     }
 
     &-login {
+      cursor: pointer;
+      height: fit-content;
       background: transparent;
-      border: 1px solid var.$neutral-l-grey-color;
+      padding: 0 20px;
+      font-size: 14px;
       color: var.$primary-color;
     }
     &-signup {

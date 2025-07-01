@@ -41,32 +41,40 @@ document.addEventListener("DOMContentLoaded", function () {
   hamburgerMenu.classList.add("collapsed");
 
   // Slider Hero
+  const slider = document.querySelector(".slider-wrapper");
   const slides = document.querySelectorAll(".slider-item");
   const indicators = document.querySelectorAll(".hero__indicator-item");
   let currentSlide = 0;
+  let totalSlides = slides.length;
 
-  function showSlide(index) {
-    // Ẩn tất cả slides trước
-
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-    });
-    setTimeout(() => {
-      slides.forEach((slide, i) => {
-        if (i === index) slide.classList.toggle("active");
-      });
-    }, 300);
-
-    // Cập nhật indicators
+  function updateSlider(currentSlide) {
+    let width = slides[0].clientWidth;
+    if (currentSlide >= totalSlides) {
+      currentSlide = 0; // Reset to first slide if out of bounds
+      slider.style.transform = `translateX(0px)`;
+      return;
+    }
+    slider.style.transform = `translateX(${currentSlide * -1 * width}px)`;
     indicators.forEach((dot, i) => {
-      dot.classList.toggle("hero__indicator-item--active", i === index);
+      dot.classList.toggle("hero__indicator-item--active", i === currentSlide);
     });
-    currentSlide = index;
   }
+
+  // Khởi tạo slider
+
+  updateSlider();
 
   indicators.forEach((dot, i) => {
     dot.addEventListener("click", () => {
-      showSlide(i);
+      currentSlide = i;
+      updateSlider(currentSlide);
     });
   });
+
+  // Tự động chuyển slide mỗi 5s
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider(currentSlide);
+  }, 3000);
+  console.log("check index", currentSlide);
 });
