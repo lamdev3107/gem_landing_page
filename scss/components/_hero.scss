@@ -8,7 +8,7 @@
   background-color: var.$neutral-silver-color;
   position: relative;
 
-  .hero__slider {
+  &__slider {
     @extend .container;
     position: relative;
     // overflow: hidden;
@@ -90,19 +90,23 @@
 }
 @media (max-width: 768px) {
   .hero {
-    .slider-item {
-      flex-direction: column;
-      gap: 64px;
-      padding-top: 48px;
-      padding-bottom: 48px;
-      align-items: center;
-      text-align: center;
-      &__content {
-        justify-content: center;
+    &__slider {
+      .slider-item {
+        flex-direction: column;
+        gap: 64px;
+        padding-top: 48px;
+        padding-bottom: 48px;
         align-items: center;
-      }
-      &__title--green {
-        margin-top: 8px;
+        text-align: center;
+        height: fit-content;
+        max-height: fit-content;
+        &__content {
+          justify-content: center;
+          align-items: center;
+        }
+        &__title--green {
+          margin-top: 8px;
+        }
       }
     }
   }
