@@ -19,7 +19,6 @@ const hamburgerMenu = document.querySelector(".hamburger-menu");
 const hamburgerMenuList = document.querySelector(".hamburger-menu__list");
 const overlay = document.querySelector(".overlay");
 const toggleSidebarBtn = document.querySelector(".header__hamburger-btn");
-console.log("check ", hamburgerMenu.classList);
 
 const hamburgerMenuClose = document.querySelector(".hamburger-menu__close");
 toggleSidebarBtn.addEventListener("click", handleSidebarToggle);
@@ -40,4 +39,38 @@ overlay.addEventListener("click", function (e) {
 
 document.addEventListener("DOMContentLoaded", function () {
   hamburgerMenu.classList.add("collapsed");
+
+  // Slider Hero
+  const slides = document.querySelectorAll(".slider-item");
+  const indicators = document.querySelectorAll(".hero__indicator-item");
+
+  function showSlide(index) {
+    // Ẩn tất cả slides trước
+
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+    });
+
+    // Hiện slide mới với delay để fade effect mượt mà
+    setTimeout(() => {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }, 100);
+
+    // Cập nhật indicators
+    indicators.forEach((dot, i) => {
+      dot.classList.toggle("hero__indicator-item--active", i === index);
+    });
+    currentSlide = index;
+  }
+
+  indicators.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      showSlide(i);
+    });
+  });
+
+  // Hiển thị slide đầu tiên khi load
+  showSlide(0);
 });
