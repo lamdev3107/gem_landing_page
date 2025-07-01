@@ -265,20 +265,19 @@ button {
 .hero .hero__slider .slider-item {
   overflow: hidden;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   padding-top: 96px;
   padding-bottom: 96px;
   display: flex;
   justify-content: space-between;
   gap: 32px;
+  width: 0px;
   height: fit-content;
+  max-height: 480px;
 }
 .hero .hero__slider .slider-item.active {
-  width: 100%;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-between;
   opacity: 1;
+  width: 100%;
 }
 .hero .hero__slider .slider-item__content {
   display: flex;

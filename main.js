@@ -50,13 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
     slides.forEach((slide, i) => {
       slide.classList.remove("active");
     });
-
-    // Hiện slide mới với delay để fade effect mượt mà
     setTimeout(() => {
       slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
+        if (i === index) slide.classList.toggle("active");
       });
-    }, 100);
+    }, 300);
 
     // Cập nhật indicators
     indicators.forEach((dot, i) => {
@@ -71,6 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Tự động chuyển slide mỗi 5 giây
+  let currentSlide = 0;
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 3000);
   // Hiển thị slide đầu tiên khi load
   showSlide(0);
 });
