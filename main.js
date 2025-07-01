@@ -70,11 +70,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Tự động chuyển slide mỗi 5 giây
-  let currentSlide = 0;
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }, 3000);
+  // let currentSlide = 0;
+  // setInterval(() => {
+  //   currentSlide = (currentSlide + 1) % slides.length;
+  //   showSlide(currentSlide);
+  // }, 3000);
   // Hiển thị slide đầu tiên khi load
   showSlide(0);
 });
