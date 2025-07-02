@@ -11,6 +11,7 @@
     padding-top: 64px;
     padding-bottom: 64px;
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     @include mix.mq-md {
       flex-direction: column;

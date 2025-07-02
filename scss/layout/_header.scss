@@ -9,10 +9,6 @@
   background-color: var.$neutral-silver-color;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  &__hamburger-btn {
-    display: block;
-  }
-
   &__container {
     @extend .container;
     height: 100%;
@@ -31,6 +27,7 @@
     display: flex;
     height: 100%;
     align-items: center;
+
     @include mix.mq-lg {
       display: none;
     }
@@ -38,6 +35,9 @@
       @include mix.flex-center;
       list-style: none;
       gap: 50px;
+      @include mix.mq-xl {
+        gap: 30px;
+      }
     }
 
     &-link {

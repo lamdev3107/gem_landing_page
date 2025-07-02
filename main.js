@@ -76,5 +76,4 @@ document.addEventListener("DOMContentLoaded", function () {
     currentSlide = (currentSlide + 1) % totalSlides;
     updateSlider(currentSlide);
   }, 3000);
-  console.log("check index", currentSlide);
 });

@@ -14,7 +14,6 @@
   gap: 64px;
   @include mix.mq-md {
     flex-direction: column;
-    padding-bottom: 44px;
     gap: 32px;
   }
   &__img {

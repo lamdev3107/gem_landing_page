@@ -4,11 +4,23 @@
   line-height: 76px;
   font-weight: 600;
 }
+@media (max-width: 992px) {
+  .headline-1, .get-demo__title, .hero__slider .slider-item__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
 
 .headline-2, .local-business__container .local-business__left .local-business__left-title, .pixel-grade__content .pixel-grade__text-content .pixel-grade__text-title, .section-head__title {
   font-size: 36px;
   line-height: 44px;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .headline-2, .local-business__container .local-business__left .local-business__left-title, .pixel-grade__content .pixel-grade__text-content .pixel-grade__text-title, .section-head__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 .headline-3, .local-business__container .local-business__right .right-item__number, .community-card__top-content h3 {
@@ -16,11 +28,23 @@
   line-height: 36px;
   font-weight: 600;
 }
+@media (max-width: 768px) {
+  .headline-3, .local-business__container .local-business__right .right-item__number, .community-card__top-content h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
 
 .headline-4, footer .right-content-items__title, .caring__card-grid .card-item__content p, .caring__card-grid .card-item__content a, .tesla__right .top-content .person__name, .tesla__right .bottom-content__link {
   font-size: 20px;
   line-height: 28px;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .headline-4, footer .right-content-items__title, .caring__card-grid .card-item__content p, .caring__card-grid .card-item__content a, .tesla__right .top-content .person__name, .tesla__right .bottom-content__link {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .body-1, .body-1-medium {
@@ -165,11 +189,21 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+@media (max-width: 992px) {
+  .button {
+    padding: 14px 32px;
+  }
+}
+@media (max-width: 768px) {
+  .button {
+    padding: 12px 32px;
+  }
+}
 .button--md, .hamburger-menu__item button {
   padding: 14px 32px;
 }
 .button--sm {
-  padding: 8px 32px;
+  padding: 12px 32px;
 }
 .button--primary, .get-demo__button, .header__buttons-signup {
   background-color: #4caf4f;
@@ -180,9 +214,6 @@ button {
   height: 84px;
   background-color: #f5f7fa;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.header__hamburger-btn {
-  display: block;
 }
 .header__container {
   height: 100%;
@@ -211,6 +242,11 @@ button {
   align-items: center;
   list-style: none;
   gap: 50px;
+}
+@media (max-width: 1200px) {
+  .header__nav-list {
+    gap: 30px;
+  }
 }
 .header__nav-link {
   text-decoration: none;
@@ -328,20 +364,17 @@ button {
   display: block;
   line-height: 50px;
 }
-@media (max-width: 768px) {
-  .hero__slider .slider-item__title {
-    font-size: 36px;
-    line-height: 44px;
-    max-width: 100%;
-    text-align: center;
-  }
-}
 .hero__slider .slider-item__description {
   color: #717171;
 }
 .hero__slider .slider-item__image img {
   width: 272px;
   height: auto;
+}
+@media (max-width: 768px) {
+  .hero__slider .slider-item__image {
+    display: none;
+  }
 }
 .hero__indicator {
   position: absolute;
@@ -432,8 +465,16 @@ button {
     gap: 44px;
   }
 }
+@media (max-width: 576px) {
+  .community__grid {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
 .community-card {
   flex: 1;
+  flex-shrink: 0;
   background-color: #fff;
   border-radius: 8px;
   padding: 24px 32px;
@@ -475,7 +516,6 @@ button {
 @media (max-width: 768px) {
   .pixel-grade {
     flex-direction: column;
-    padding-bottom: 44px;
     gap: 32px;
   }
 }
@@ -532,6 +572,7 @@ button {
   padding-top: 64px;
   padding-bottom: 64px;
   display: flex;
+  gap: 20px;
   justify-content: space-between;
 }
 @media (max-width: 768px) {
@@ -586,6 +627,7 @@ button {
   background-color: #f5f7fa;
 }
 .tesla__container {
+  margin-top: 64px;
   display: flex;
   gap: 40px;
   justify-content: space-between;

@@ -6,6 +6,7 @@
   background-color: var.$neutral-silver-color;
   &__container {
     @extend .container;
+    margin-top: 64px;
     display: flex;
     gap: 40px;
     justify-content: space-between;
