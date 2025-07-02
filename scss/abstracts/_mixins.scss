@@ -15,3 +15,27 @@
   box-shadow: $offset-x $offset-y $blur-radius $spread-radius
     rgba(var.$shadow-color-base, $opacity);
 }
+
+@mixin mq-sm {
+  @media (max-width: var.$breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin mq-md {
+  @media (max-width: var.$breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin mq-lg {
+  @media (max-width: var.$breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin mq-xl {
+  @media (max-width: var.$breakpoint-xl) {
+    @content;
+  }
+}

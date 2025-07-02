@@ -7,7 +7,7 @@
   min-height: fit-content;
   background-color: var.$neutral-silver-color;
   position: relative;
-  overflow: hidden;
+
   &__slider {
     position: relative;
     height: 100%;
@@ -15,6 +15,7 @@
 
     .slider-wrapper {
       display: flex;
+      width: 100%;
       transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .slider-item {
@@ -28,9 +29,17 @@
       pointer-events: none;
       position: relative;
       height: fit-content;
-      max-height: 480px;
       max-width: 100%;
-
+      @include mix.mq-md {
+        flex-direction: column;
+        gap: 64px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        align-items: center;
+        text-align: center;
+        height: fit-content;
+        max-height: fit-content;
+      }
       &.active {
         opacity: 1;
         pointer-events: auto;
@@ -39,7 +48,12 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+        @include mix.mq-md {
+          justify-content: center;
+          align-items: center;
+        }
       }
+
       &__title {
         @extend .headline-1;
         color: var.$secondary-color;
@@ -47,6 +61,12 @@
           color: var.$primary-color;
           display: block;
           line-height: 50px;
+        }
+        @include mix.mq-md {
+          font-size: 36px;
+          line-height: 44px;
+          max-width: 100%;
+          text-align: center;
         }
       }
       &__description {
@@ -89,29 +109,6 @@
         background: var.$primary-color;
         opacity: 100%;
         transform: scale(1.2);
-      }
-    }
-  }
-}
-@media (max-width: 768px) {
-  .hero {
-    &__slider {
-      .slider-item {
-        flex-direction: column;
-        gap: 64px;
-        padding-top: 48px;
-        padding-bottom: 48px;
-        align-items: center;
-        text-align: center;
-        height: fit-content;
-        max-height: fit-content;
-        &__content {
-          justify-content: center;
-          align-items: center;
-        }
-        &__title--green {
-          margin-top: 8px;
-        }
       }
     }
   }

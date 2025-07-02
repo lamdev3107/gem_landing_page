@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 @use "../base" as *;
 
 .tesla {
@@ -10,12 +11,23 @@
     justify-content: space-between;
     padding-top: 32px;
     padding-bottom: 32px;
+    @include mix.mq-md {
+      gap: 8px;
+      flex-direction: column;
+    }
   }
   &__left {
+    @include mix.mq-lg {
+      text-align: center;
+    }
     img {
       width: 326px;
       height: 326px;
       border-radius: 8px;
+      @include mix.mq-md {
+        width: 100%;
+        object-fit: contain;
+      }
     }
   }
   &__right {
@@ -30,6 +42,10 @@
         @extend .body-2;
         color: var.$neutral-grey-color;
         margin-bottom: 16px;
+        @include mix.mq-lg {
+          width: 100%;
+          text-align: justify;
+        }
       }
       .person {
         &__name {
@@ -49,10 +65,17 @@
       column-gap: 32px;
       row-gap: 8px;
       flex-wrap: wrap;
-
+      @include mix.mq-lg {
+        flex-direction: column;
+        gap: 8px;
+      }
       &__list-icon {
         display: flex;
         gap: 36px;
+        @include mix.mq-lg {
+          flex-wrap: wrap;
+          row-gap: 8px;
+        }
         img {
           width: 44px;
           height: 44px;
@@ -66,42 +89,6 @@
         text-decoration: none;
         color: var.$primary-color;
         vertical-align: middle;
-      }
-    }
-  }
-}
-@media (max-width: 991px) {
-  .tesla {
-    &__container {
-      .top-content {
-        &__para {
-          text-align: justify;
-        }
-      }
-      .bottom-content {
-        flex-direction: column;
-        &__list-icon {
-          flex-wrap: wrap;
-          row-gap: 16px;
-        }
-      }
-    }
-    &__left {
-      text-align: center;
-    }
-  }
-}
-@media (max-width: 768px) {
-  .tesla {
-    &__container {
-      gap: 8px;
-      flex-direction: column;
-    }
-    &__left {
-      text-align: center;
-      img {
-        width: 100%;
-        object-fit: contain;
       }
     }
   }

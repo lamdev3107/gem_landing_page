@@ -9,6 +9,10 @@
   background-color: var.$neutral-silver-color;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
+  &__hamburger-btn {
+    display: block;
+  }
+
   &__container {
     @extend .container;
     height: 100%;
@@ -18,7 +22,6 @@
 
   &__logo {
     display: block;
-
     &-img {
       height: 24px;
     }
@@ -28,6 +31,9 @@
     display: flex;
     height: 100%;
     align-items: center;
+    @include mix.mq-lg {
+      display: none;
+    }
     &-list {
       @include mix.flex-center;
       list-style: none;
@@ -48,6 +54,9 @@
     display: flex;
     align-items: center;
     gap: 14px;
+    @include mix.mq-lg {
+      display: none;
+    }
 
     button {
       padding: 10px 20px;
@@ -75,6 +84,9 @@
     width: 32px;
     height: 32px;
     display: none;
+    @include mix.mq-lg {
+      display: block;
+    }
     svg {
       width: 20px;
       height: 20px;
@@ -85,14 +97,14 @@
     }
   }
 }
-@media (max-width: 1199px) {
-  .header {
-    &__nav,
-    &__buttons {
-      display: none;
-    }
-    &__hamburger-btn {
-      display: block;
-    }
-  }
-}
+// @media (max-width: 1199px) {
+//   .header {
+//     &__nav,
+//     &__buttons {
+//       display: none;
+//     }
+//     &__hamburger-btn {
+//       display: block;
+//     }
+//   }
+// }

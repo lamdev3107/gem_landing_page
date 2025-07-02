@@ -50,10 +50,25 @@ button {
   padding-right: 144px;
   padding-left: 144px;
   margin: 0 auto;
+  @include mix.mq-xl {
+    padding-right: 88px;
+    padding-left: 88px;
+  }
+  @include mix.mq-lg {
+    padding-right: 44px;
+    padding-left: 44px;
+  }
+  @include mix.mq-md {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 .section {
   margin-top: 40px;
+  @include mix.mq-md {
+    margin-top: 80px;
+  }
   &-head {
     max-width: 1440px;
     display: flex;
@@ -73,34 +88,5 @@ button {
       color: var.$neutral-grey-color;
       max-width: 628px;
     }
-  }
-}
-
-@media (max-width: 1199px) {
-  .container {
-    padding-right: 88px;
-    padding-left: 88px;
-  }
-
-  footer {
-    gap: 20px;
-    .right-content {
-      gap: 20px;
-    }
-  }
-}
-@media (max-width: 991px) {
-  .container {
-    padding-right: 44px;
-    padding-left: 44px;
-  }
-}
-@media (max-width: 768px) {
-  .section {
-    margin-top: 80px;
-  }
-  .container {
-    padding-right: 20px;
-    padding-left: 20px;
   }
 }

@@ -1,14 +1,26 @@
 @use "../abstracts/variables" as *;
 @use "../base" as *; // Sẽ tìm sass/base/_index.scss và xuất tất cả ra ngoài
-
+@use "../abstracts/mixins" as mix;
 footer {
   background-color: $neutral-black-color;
+  @include mix.mq-xl {
+    gap: 20px;
+  }
+  @include mix.mq-lg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .footer-container {
     @extend .container;
     padding-top: 64px;
     padding-bottom: 64px;
     display: flex;
     justify-content: space-between;
+    @include mix.mq-lg {
+      flex-direction: column;
+      row-gap: 40px;
+    }
   }
 
   .left-content {
@@ -17,6 +29,10 @@ footer {
     align-items: start;
     width: 350px;
     gap: 40px;
+    @include mix.mq-lg {
+      gap: 20px;
+      width: 100%;
+    }
     &__logo {
       height: 30px;
       text-align: left;
@@ -49,6 +65,13 @@ footer {
   .right-content {
     display: flex;
     gap: 40px;
+    @include mix.mq-xl {
+      gap: 20px;
+    }
+    @include mix.mq-lg {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
     &-items {
       &__title {
         @extend .headline-4;
@@ -93,34 +116,6 @@ footer {
           transform: translateY(-50%);
         }
       }
-    }
-  }
-}
-
-@media (max-width: 1199px) {
-  footer {
-    gap: 20px;
-    .right-content {
-      gap: 20px;
-    }
-  }
-}
-@media (max-width: 991px) {
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .footer-container {
-      flex-direction: column;
-      row-gap: 40px;
-    }
-    .left-content {
-      gap: 20px;
-      width: 100%;
-    }
-    .right-content {
-      flex-wrap: wrap;
-      gap: 40px;
     }
   }
 }

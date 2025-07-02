@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 @use "../base" as *;
 
 //Local business section
@@ -11,12 +12,22 @@
     padding-bottom: 64px;
     display: flex;
     justify-content: space-between;
+    @include mix.mq-md {
+      flex-direction: column;
+      display: flex;
+      gap: 44px;
+      align-items: center;
+    }
     .local-business__left {
       display: flex;
       flex-direction: column;
       gap: 8px;
       width: 540px;
       max-width: fit-content;
+      @include mix.mq-md {
+        text-align: center;
+        width: 100%;
+      }
 
       .local-business__left-title {
         @extend .headline-2;
@@ -33,6 +44,9 @@
       max-width: 540px;
       grid-template-columns: repeat(2, 1fr);
       gap: 40px 30px;
+      @include mix.mq-md {
+        grid-template-columns: repeat(1, 1fr);
+      }
       .right-item {
         display: flex;
         align-items: center;
@@ -50,23 +64,6 @@
           @extend .body-2;
           color: var.$neutral-grey-color;
         }
-      }
-    }
-  }
-}
-@media (max-width: 768px) {
-  .local-business {
-    background: var.$neutral-silver-color;
-    &__container {
-      flex-direction: column;
-      display: flex;
-      gap: 44px;
-      align-items: center;
-      .local-business__left {
-        text-align: center;
-      }
-      .local-business__right {
-        grid-template-columns: repeat(1, 1fr);
       }
     }
   }
