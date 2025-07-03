@@ -6,7 +6,9 @@
   border-radius: 4px;
   width: fit-content;
   border: none;
-  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
   &:active {
@@ -17,15 +19,28 @@
   }
   @include mix.mq-lg {
     padding: 14px 32px;
+    font-size: 16px;
+    line-height: 20px;
   }
   @include mix.mq-md {
     padding: 12px 32px;
+    font-size: 14px;
+    line-height: 16px;
   }
   &--md {
     padding: 14px 32px;
+    font-size: 16px;
+    line-height: 20px;
+    @include mix.mq-md {
+      padding: 12px 32px;
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
   &--sm {
     padding: 12px 32px;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   &--primary {

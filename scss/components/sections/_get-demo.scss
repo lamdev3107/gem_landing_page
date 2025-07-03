@@ -24,7 +24,7 @@
   }
   &__button {
     @extend .button--primary;
-    padding: 14px 32px;
+    @extend .button--md;
     border: none;
     margin-top: 16px;
     display: flex;

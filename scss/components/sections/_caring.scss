@@ -33,13 +33,13 @@
         transform: translate(-50%, -50%);
         background-color: var.$neutral-silver-color;
         padding: 16px;
-        p {
+        &-title {
           @extend .headline-4;
           color: var.$neutral-grey-color;
           text-align: center;
           height: fit-content;
         }
-        a {
+        &-read-more {
           margin-top: 16px;
           text-decoration: none;
           display: flex;

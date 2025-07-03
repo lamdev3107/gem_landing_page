@@ -2,7 +2,6 @@
 @use "../../abstracts/mixins" as mix;
 .clients {
   text-align: center;
-
   &__logo-grid {
     display: flex;
     min-height: fit-content;
@@ -16,7 +15,7 @@
       flex-wrap: wrap;
       justify-content: space-around;
     }
-    img {
+    &-item {
       width: 48px;
       height: 48px;
     }

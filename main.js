@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (hamburgerMenu.classList.contains("is-active")) {
       hamburgerMenu.classList.remove("is-active");
       setTimeout(() => {
-        overlay.style.display = "none";
+        overlay.classList.remove("is-active");
       }, 300);
     } else {
-      overlay.style.display = "block";
+      overlay.classList.add("is-active");
       setTimeout(() => {
         hamburgerMenu.classList.add("is-active");
       }, 250);
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!hamburgerMenu.contains(e.target) && e.target !== toggleSidebarBtn) {
         hamburgerMenu.classList.remove("is-active");
         setTimeout(() => {
-          overlay.style.display = "none";
+          overlay.classList.remove("is-active");
         }, 250);
       }
     }

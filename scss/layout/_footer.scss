@@ -16,13 +16,13 @@ footer {
     padding-top: 64px;
     padding-bottom: 64px;
     display: flex;
+    gap: 40px;
     justify-content: space-between;
     @include mix.mq-lg {
       flex-direction: column;
       row-gap: 40px;
     }
   }
-
   .company-info {
     display: inline-flex;
     flex-direction: column;
@@ -48,7 +48,7 @@ footer {
       display: flex;
       gap: 16px;
 
-      a {
+      &-link {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -76,14 +76,14 @@ footer {
         color: white;
         margin-bottom: 24px;
       }
-      ul {
+      &__items {
         width: 160px;
         display: flex;
         gap: 12px;
         flex-direction: column;
         @extend .body-3;
         color: $neutral-silver-color;
-        a {
+        &-link {
           color: $neutral-silver-color;
         }
       }

@@ -30,7 +30,7 @@
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a href="#" class="header__nav-link header__nav-link--active"
+                <a href="#" class="header__nav-link header__nav-link--is-active"
                   >Home</a
                 >
               </li>
@@ -58,7 +58,11 @@
             </button>
           </div>
           <button class="header__hamburger-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="header__hamburger-btn-icon"
+              viewBox="0 0 448 512"
+            >
               <path
                 d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
               />
@@ -145,7 +149,7 @@
 
           <div class="hero__indicator">
             <button
-              class="hero__indicator-item hero__indicator-item--active"
+              class="hero__indicator-item hero__indicator-item--is-active"
             ></button>
             <button class="hero__indicator-item"></button>
             <button class="hero__indicator-item"></button>
@@ -164,13 +168,41 @@
           </div>
 
           <div class="clients__logo-grid">
-            <img src="assets/icons/client-1.svg" alt="client-1" />
-            <img src="assets/icons/client-2.svg" alt="client-2" />
-            <img src="assets/icons/client-3.svg" alt="client-3" />
-            <img src="assets/icons/client-4.svg" alt="client-4" />
-            <img src="assets/icons/client-5.svg" alt="client-5" />
-            <img src="assets/icons/client-6.svg" alt="client-6" />
-            <img src="assets/icons/client-7.svg" alt="client-7" />
+            <img
+              class="client__logo-grid-item"
+              src="assets/icons/client-1.svg"
+              alt="client-1"
+            />
+            <img
+              class="client__logo-grid-item"
+              src="assets/icons/client-2.svg"
+              alt="client-2"
+            />
+            <img
+              class="client__logo-grid-item"
+              src="assets/icons/client-3.svg"
+              alt="client-3"
+            />
+            <img
+              class="client__logo-grid-item"
+              src="assets/icons/client-4.svg"
+              alt="client-4"
+            />
+            <img
+              class="client__logo-grid-item"
+              src="assets/icons/client-5.svg"
+              alt="client-5"
+            />
+            <img
+              class="client__logo-grid-item"
+              src="assets/icons/client-6.svg"
+              alt="client-6"
+            />
+            <img
+              class="client__logo-grid-item"
+              src="assets/icons/client-7.svg"
+              alt="client-7"
+            />
           </div>
         </div>
       </section>
@@ -187,13 +219,15 @@
 
           <div class="community__grid">
             <div class="community-card">
-              <div class="community-card__top-content">
+              <div class="community-card__header">
                 <img
                   src="assets/icons/community-1.svg"
                   alt="National"
-                  class="community-card__icon"
+                  class="community-card__header-icon"
                 />
-                <h3 class="community-card__title">Membership Organisations</h3>
+                <h3 class="community-card__header-title">
+                  Membership Organisations
+                </h3>
               </div>
               <p class="community-card__description">
                 Our membership management software provides full automation of
@@ -202,13 +236,15 @@
             </div>
 
             <div class="community-card">
-              <div class="community-card__top-content">
+              <div class="community-card__header">
                 <img
                   src="assets/icons/community-2.svg"
                   alt="National"
-                  class="community-card__icon"
+                  class="community-card__header-icon"
                 />
-                <h3 class="community-card__title">National Associations</h3>
+                <h3 class="community-card__header-title">
+                  National Associations
+                </h3>
               </div>
               <p class="community-card__description">
                 Our membership management software provides full automation of
@@ -217,13 +253,13 @@
             </div>
 
             <div class="community-card">
-              <div class="community-card__top-content">
+              <div class="community-card__header">
                 <img
                   src="assets/icons/community-3.svg"
                   alt="National"
-                  class="community-card__icon"
+                  class="community-card__header-icon"
                 />
-                <h3 class="community-card__title">Clubs And Groups</h3>
+                <h3 class="community-card__header-title">Clubs And Groups</h3>
               </div>
               <p class="community-card__description">
                 Our membership management software provides full automation of
@@ -240,10 +276,10 @@
         </div>
         <div class="unclock__content">
           <div class="unclock__text-content">
-            <h2 class="unclock__text-title">
+            <h2 class="unclock__text-content-title">
               The unseen of spending three years at Pixelgrade
             </h2>
-            <p class="unclock__text-desc">
+            <p class="unclock__text-content-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
               amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
               Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
@@ -252,7 +288,7 @@
               elementum pulvinar odio.
             </p>
           </div>
-          <button class="button button--md button--primary">Learn more</button>
+          <button class="unclock__content-button">Learn more</button>
         </div>
       </section>
 
@@ -328,10 +364,10 @@
         </div>
         <div class="unclock__content">
           <div class="unclock__text-content">
-            <h2 class="unclock__text-title">
+            <h2 class="unclock__text-content-title">
               How to design your site footer like we did
             </h2>
-            <p class="unclock__text-desc">
+            <p class="unclock__text-content-desc">
               Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
               augue nec tincidunt molestie, massa nunc varius arcu, at
               scelerisque elit erat a magna. Donec quis erat at libero ultrices
@@ -343,7 +379,7 @@
               ipsum id gravida.
             </p>
           </div>
-          <button class="button button--md button--primary">Learn more</button>
+          <button class="unclock__content-button">Learn more</button>
         </div>
       </section>
 
@@ -439,10 +475,10 @@
               class="card-item__img"
             />
             <div class="card-item__content">
-              <p class="card-item__title">
+              <p class="card-item__content-title">
                 Creating Streamlined Safeguarding Processes with OneRen
               </p>
-              <a href="" class="card-item__read-more">
+              <a href="" class="card-item__content-read-more">
                 Read more
                 <img
                   src="assets/icons/arrow-right.svg"
@@ -458,11 +494,11 @@
               class="card-item__img"
             />
             <div class="card-item__content">
-              <p class="card-item__title">
+              <p class="card-item__content-title">
                 What are your safeguarding responsibilities and how can you
                 manage them?
               </p>
-              <a href="" class="card-item__read-more">
+              <a href="" class="card-item__content-read-more">
                 Read more
                 <img
                   src="assets/icons/arrow-right.svg"
@@ -478,10 +514,10 @@
               class="card-item__img"
             />
             <div class="card-item__content">
-              <p class="card-item__title">
+              <p class="card-item__content-title">
                 Revamping the Membership Model with Triathlon Australia
               </p>
-              <a href="" class="card-item__read-more">
+              <a href="" class="card-item__content-read-more">
                 Read more
                 <img
                   src="assets/icons/arrow-right.svg"
@@ -518,16 +554,16 @@
               <p class="company-info__copyright-text">All rights reserved</p>
             </div>
             <div class="company-info__social">
-              <a href="#"
+              <a href="#" class="company-info__social-link"
                 ><img src="assets/icons/instagram.svg" alt="insta"
               /></a>
-              <a href="#"
+              <a href="#" class="company-info__social-link"
                 ><img src="assets/icons/dribble.svg" alt="dribble"
               /></a>
-              <a href="#"
+              <a href="#" class="company-info__social-link"
                 ><img src="assets/icons/twitter.svg" alt="twitter"
               /></a>
-              <a href="#"
+              <a href="#" class="company-info__social-link"
                 ><img src="assets/icons/youtube.svg" alt="youtube"
               /></a>
             </div>
@@ -536,22 +572,56 @@
           <div class="company-links">
             <div class="company-links-group">
               <h4 class="company-links-group__title">Company</h4>
-              <ul>
-                <li><a class="" href="#">About us</a></li>
-                <li><a class="" href="#">Blog</a></li>
-                <li><a class="" href="#">Contact us</a></li>
-                <li><a class="" href="#">Pricing</a></li>
-                <li><a class="" href="#">Testimonials</a></li>
+              <ul class="company-links-group__items">
+                <li>
+                  <a class="company-links-group__items-link" href="#"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a class="company-links-group__items-link" href="#">Blog</a>
+                </li>
+                <li>
+                  <a class="company-links-group__items-link" href="#"
+                    >Contact us</a
+                  >
+                </li>
+                <li>
+                  <a class="company-links-group__items-link" href="#"
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <a class="company-links-group__items-link" href="#"
+                    >Testimonials</a
+                  >
+                </li>
               </ul>
             </div>
             <div class="company-links-group">
               <h4 class="company-links-group__title">Support</h4>
               <ul class="company-links-group__items">
-                <li><a class="" href="#">Help center</a></li>
-                <li><a class="" href="#">Term of service</a></li>
-                <li><a class="" href="#">Legal</a></li>
-                <li><a class="" href="#">Privacy policy</a></li>
-                <li><a class="" href="#">Status</a></li>
+                <li>
+                  <a class="company-links-group__items-link" href="#"
+                    >Help center</a
+                  >
+                </li>
+                <li>
+                  <a class="company-links-group__items-link" href="#"
+                    >Term of service</a
+                  >
+                </li>
+                <li>
+                  <a class="company-links-group__items-link" href="#">Legal</a>
+                </li>
+                <li>
+                  <a class="company-links-group__items-link" href="#"
+                    >Privacy policy</a
+                  >
+                </li>
+                <li>
+                  <a class="company-links-group__items-link" href="#">Status</a>
+                </li>
               </ul>
             </div>
             <div class="company-links-group">
@@ -576,36 +646,38 @@
             <li class="hamburger-menu__item">
               <a
                 href="#"
-                class="hamburger-menu__link hamburger-menu__link--active"
+                class="hamburger-menu__item-link hamburger-menu__item-link--is-active"
                 >Home</a
               >
             </li>
             <li class="hamburger-menu__item">
-              <a href="#" class="hamburger-menu__link">Service</a>
+              <a href="#" class="hamburger-menu__item-link">Service</a>
             </li>
             <li class="hamburger-menu__item">
-              <a href="#" class="hamburger-menu__link">Feature</a>
+              <a href="#" class="hamburger-menu__item-link">Feature</a>
             </li>
             <li class="hamburger-menu__item">
-              <a href="#" class="hamburger-menu__link">Product</a>
+              <a href="#" class="hamburger-menu__item-link">Product</a>
             </li>
             <li class="hamburger-menu__item">
-              <a href="#" class="hamburger-menu__link">Testimonial</a>
+              <a href="#" class="hamburger-menu__item-link">Testimonial</a>
             </li>
             <li class="hamburger-menu__item">
-              <a href="#" class="hamburger-menu__link">FAQ</a>
+              <a href="#" class="hamburger-menu__item-link">FAQ</a>
             </li>
             <div class="hamburger-menu__item">
-              <button class="hamburger-menu__button-login button--md">
-                Log In
-              </button>
-              <button class="hamburger-menu__button-signup button--md">
+              <button class="button hamburger-menu__item-button">Log In</button>
+              <button class="button hamburger-menu__item-button">
                 Sign Up
               </button>
             </div>
           </ul>
           <button class="hamburger-menu__close">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <svg
+              class="hamburger-menu__close-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+            >
               <path
                 d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
               />
