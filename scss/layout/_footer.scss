@@ -1,5 +1,5 @@
 @use "../abstracts/variables" as *;
-@use "../base" as *; // Sẽ tìm sass/base/_index.scss và xuất tất cả ra ngoài
+@use "../base" as *;
 @use "../abstracts/mixins" as mix;
 footer {
   background-color: $neutral-black-color;
@@ -23,7 +23,7 @@ footer {
     }
   }
 
-  .left-content {
+  .company-info {
     display: inline-flex;
     flex-direction: column;
     align-items: start;
@@ -38,12 +38,10 @@ footer {
       text-align: left;
     }
     &__copyright {
-      p:first-child {
+      @extend .body-3;
+      color: $neutral-silver-color;
+      &-text:first-child {
         margin-bottom: 8px;
-      }
-      p {
-        color: $neutral-silver-color;
-        @extend .body-3;
       }
     }
     &__social {
@@ -62,7 +60,7 @@ footer {
     }
   }
 
-  .right-content {
+  .company-links {
     display: flex;
     gap: 40px;
     @include mix.mq-xl {
@@ -72,7 +70,7 @@ footer {
       flex-wrap: wrap;
       gap: 40px;
     }
-    &-items {
+    &-group {
       &__title {
         @extend .headline-4;
         color: white;
@@ -96,25 +94,25 @@ footer {
         width: 255px;
         position: relative;
         border-radius: 8px;
-        input {
+        &-input {
           background-color: transparent;
           outline: none;
           color: white;
           height: 100%;
           border: none;
+          &::placeholder {
+            color: #d9dbe1;
+          }
         }
-        input::placeholder {
-          color: #d9dbe1;
-        }
-        .right-content-items__send-btn {
-          position: absolute;
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-          right: 16px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
+      }
+      &__send-btn {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }

@@ -9,6 +9,12 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  &:active {
+    background-color: var.$shade-2-color;
+  }
+  &:focus {
+    outline: 1px var.$neutral-d-grey-color solid;
+  }
   @include mix.mq-lg {
     padding: 14px 32px;
   }

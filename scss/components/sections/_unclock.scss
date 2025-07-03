@@ -1,9 +1,9 @@
-@use "../abstracts/variables" as var;
-@use "../abstracts/mixins" as mix;
-@use "../base" as *;
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mix;
+@use "../../base" as *;
 
 //Pixel grade section
-.pixel-grade {
+.unclock {
   @extend .section;
   @extend .container;
   height: 433px;
@@ -40,15 +40,15 @@
     @include mix.mq-md {
       gap: 20px;
     }
-    .pixel-grade__text-content {
+    .unclock__text-content {
       flex: 1;
       display: flex;
       flex-direction: column;
       gap: 16px;
-      .pixel-grade__text-title {
+      .unclock__text-title {
         @extend .headline-2;
       }
-      .pixel-grade__text-desc {
+      .unclock__text-desc {
         @extend .body-3;
         color: var.$neutral-grey-color;
         @include mix.mq-md {

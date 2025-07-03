@@ -1,5 +1,15 @@
 // SCSS Variables
 $primary-color: #4caf4f;
+$shade-1-color: #43a046;
+$shade-2-color: #388e3b;
+$shade-3-color: #237d31;
+$shade-4-color: #1b5e1f;
+$shade-5-color: #103e13;
+$tint-1-color: #66bb69;
+$tint-2-color: #81c784;
+$tint-3-color: #a5d6a7;
+$tint-4-color: #c8e6c9;
+$tint-5-color: #e8f5e9;
 $secondary-color: #263238;
 $neutral-silver-color: #f5f7fa;
 $neutral-black-color: #263238;
@@ -12,9 +22,8 @@ $error-color: #e53835;
 $success-color: #2e7d31;
 $black-color: #263238;
 $info-color: #2194f3;
-$shadow-color-base: #abbed1; // Màu cơ bản của bóng đổ
+$shadow-color-base: #abbed1;
 
-//Font
 //Font style variables
 $font-weight-regular: 400;
 $font-weight-medium: 500;

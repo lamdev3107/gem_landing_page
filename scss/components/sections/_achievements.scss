@@ -1,9 +1,9 @@
-@use "../abstracts/variables" as var;
-@use "../abstracts/mixins" as mix;
-@use "../base" as *;
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mix;
+@use "../../base" as *;
 
-//Local business section
-.local-business {
+//Achievements section
+.achievements {
   background: var.$neutral-silver-color;
   &__container {
     @extend .section;
@@ -19,7 +19,7 @@
       gap: 44px;
       align-items: center;
     }
-    .local-business__left {
+    .achievements__introduction {
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -30,30 +30,30 @@
         width: 100%;
       }
 
-      .local-business__left-title {
+      .achievements__introduction-title {
         @extend .headline-2;
         &--green {
           color: var.$primary-color;
         }
       }
-      .local-business__left-desc {
+      .achievements__introduction-desc {
         @extend .body-2;
       }
     }
-    .local-business__right {
+    .achievements__group {
       display: grid;
       max-width: 540px;
       grid-template-columns: repeat(2, 1fr);
-      gap: 40px 30px;
+      gap: 40px;
       @include mix.mq-md {
         grid-template-columns: repeat(1, 1fr);
       }
-      .right-item {
+      .achievements-item {
         display: flex;
         align-items: center;
         gap: 16px;
 
-        img {
+        &__icon {
           width: 48px;
           height: 48px;
         }

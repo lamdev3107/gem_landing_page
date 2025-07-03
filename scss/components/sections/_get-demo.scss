@@ -1,7 +1,7 @@
-@use "../abstracts/variables" as var;
-@use "../abstracts/mixins" as mix;
-@use "../components/button" as *;
-@use "../base" as *;
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mix;
+@use "../../components/button" as *;
+@use "../../base" as *;
 
 .get-demo {
   margin-top: 144px;
