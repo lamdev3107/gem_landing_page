@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .headline-1, .get-demo__title, .hero__slider .slider-item__title {
   font-size: 64px;
   line-height: 76px;
@@ -935,10 +934,10 @@ footer .company-links-group__send-btn {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* màu đen trong suốt */
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
-.overlay-is-active {
+.overlay.is-active {
   display: block;
 }
 
